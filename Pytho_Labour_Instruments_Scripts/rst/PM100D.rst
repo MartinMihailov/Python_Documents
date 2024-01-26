@@ -1,4 +1,4 @@
-PM100D module
+Power Meter ThorLabs PM100D module
 =============
 
 .. automodule:: PM100D

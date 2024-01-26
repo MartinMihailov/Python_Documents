@@ -1,4 +1,4 @@
-CoBrite module
+CoBrite Tunable Laser module
 ==============
 
 .. automodule:: CoBrite

@@ -1,4 +1,4 @@
-RD3005 module
+Power Supply RD3005 module
 =============
 
 .. automodule:: RD3005

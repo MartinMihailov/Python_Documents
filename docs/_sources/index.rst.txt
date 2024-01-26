@@ -16,7 +16,9 @@ Instruments:
 	- KEITHLEY Source Meter 2612
 	- Novoptel Laser LU1000
 	- CoBrite Tunable Laser
+	- Power Supply RD3005
 	- Power Supply KA3005
+	- Power Supply KA3005p
 	- 4 Channels Power Suppy GPP4323
 	- AnaPico AG APPH20G
 	

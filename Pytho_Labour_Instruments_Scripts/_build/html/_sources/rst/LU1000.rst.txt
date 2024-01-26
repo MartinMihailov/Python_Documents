@@ -1,4 +1,4 @@
-LU1000 module
+Novoptel Laser LU1000 module
 =============
 
 .. automodule:: LU1000

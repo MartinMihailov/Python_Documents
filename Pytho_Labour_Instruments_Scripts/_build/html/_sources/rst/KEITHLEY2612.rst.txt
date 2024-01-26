@@ -1,4 +1,4 @@
-KEITHLEY2612 module
+KEITHLEY Source Meter 2612 module
 ===================
 
 .. automodule:: KEITHLEY2612

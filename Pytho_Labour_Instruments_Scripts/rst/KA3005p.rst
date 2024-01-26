@@ -1,4 +1,4 @@
-KA3005p module
+Power Supply KA3005p module
 ==============
 
 .. automodule:: KA3005p

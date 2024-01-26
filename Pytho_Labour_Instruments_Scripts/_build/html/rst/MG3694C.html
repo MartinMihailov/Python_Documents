@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MG3694C module &mdash; Instruments Automatisation Libraries 1.0 documentation</title>
+  <title>Anritsu Signal Generator MG3694C module &mdash; Instruments Automatisation Libraries 1.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
 
@@ -20,9 +20,7 @@
         <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="AQ6370D module" href="AQ6370D.html" />
-    <link rel="prev" title="Welcome to Instruments Automatisation Libraries’s documentation!" href="../index.html" /> 
+    <link rel="search" title="Search" href="../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -44,86 +42,76 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">MG3694C module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#MG3694C.MG3694C"><code class="docutils literal notranslate"><span class="pre">MG3694C</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#MG3694C.MG3694C.Close"><code class="docutils literal notranslate"><span class="pre">MG3694C.Close()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MG3694C.MG3694C.DisplayParamDict"><code class="docutils literal notranslate"><span class="pre">MG3694C.DisplayParamDict()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MG3694C.MG3694C.abort"><code class="docutils literal notranslate"><span class="pre">MG3694C.abort()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MG3694C.MG3694C.ask_MaximalPowerLevel"><code class="docutils literal notranslate"><span class="pre">MG3694C.ask_MaximalPowerLevel()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MG3694C.MG3694C.ask_OutputPowerLevel"><code class="docutils literal notranslate"><span class="pre">MG3694C.ask_OutputPowerLevel()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MG3694C.MG3694C.ask_am_internalFreq"><code class="docutils literal notranslate"><span class="pre">MG3694C.ask_am_internalFreq()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MG3694C.MG3694C.ask_am_internalWave"><code class="docutils literal notranslate"><span class="pre">MG3694C.ask_am_internalWave()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MG3694C.MG3694C.ask_am_logDepth"><code class="docutils literal notranslate"><span class="pre">MG3694C.ask_am_logDepth()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MG3694C.MG3694C.ask_am_logsens"><code class="docutils literal notranslate"><span class="pre">MG3694C.ask_am_logsens()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MG3694C.MG3694C.ask_am_state"><code class="docutils literal notranslate"><span class="pre">MG3694C.ask_am_state()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MG3694C.MG3694C.ask_am_type"><code class="docutils literal notranslate"><span class="pre">MG3694C.ask_am_type()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MG3694C.MG3694C.ask_fm_Bwidth"><code class="docutils literal notranslate"><span class="pre">MG3694C.ask_fm_Bwidth()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MG3694C.MG3694C.ask_fm_internalFreq"><code class="docutils literal notranslate"><span class="pre">MG3694C.ask_fm_internalFreq()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MG3694C.MG3694C.ask_fm_internalWave"><code class="docutils literal notranslate"><span class="pre">MG3694C.ask_fm_internalWave()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MG3694C.MG3694C.ask_fm_mode"><code class="docutils literal notranslate"><span class="pre">MG3694C.ask_fm_mode()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MG3694C.MG3694C.ask_fm_state"><code class="docutils literal notranslate"><span class="pre">MG3694C.ask_fm_state()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MG3694C.MG3694C.ask_freq_CW"><code class="docutils literal notranslate"><span class="pre">MG3694C.ask_freq_CW()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MG3694C.MG3694C.ask_freq_centerFreq"><code class="docutils literal notranslate"><span class="pre">MG3694C.ask_freq_centerFreq()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MG3694C.MG3694C.ask_freq_mode"><code class="docutils literal notranslate"><span class="pre">MG3694C.ask_freq_mode()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MG3694C.MG3694C.ask_freq_span"><code class="docutils literal notranslate"><span class="pre">MG3694C.ask_freq_span()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MG3694C.MG3694C.ask_freq_start"><code class="docutils literal notranslate"><span class="pre">MG3694C.ask_freq_start()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MG3694C.MG3694C.ask_freq_step"><code class="docutils literal notranslate"><span class="pre">MG3694C.ask_freq_step()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MG3694C.MG3694C.ask_freq_stop"><code class="docutils literal notranslate"><span class="pre">MG3694C.ask_freq_stop()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MG3694C.MG3694C.ask_freq_unit"><code class="docutils literal notranslate"><span class="pre">MG3694C.ask_freq_unit()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MG3694C.MG3694C.ask_output_impedance"><code class="docutils literal notranslate"><span class="pre">MG3694C.ask_output_impedance()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MG3694C.MG3694C.ask_output_protection"><code class="docutils literal notranslate"><span class="pre">MG3694C.ask_output_protection()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MG3694C.MG3694C.ask_output_retrace"><code class="docutils literal notranslate"><span class="pre">MG3694C.ask_output_retrace()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MG3694C.MG3694C.ask_pm_Bwidth"><code class="docutils literal notranslate"><span class="pre">MG3694C.ask_pm_Bwidth()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MG3694C.MG3694C.ask_pm_internalFreq"><code class="docutils literal notranslate"><span class="pre">MG3694C.ask_pm_internalFreq()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MG3694C.MG3694C.ask_pm_internalWave"><code class="docutils literal notranslate"><span class="pre">MG3694C.ask_pm_internalWave()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MG3694C.MG3694C.ask_pm_state"><code class="docutils literal notranslate"><span class="pre">MG3694C.ask_pm_state()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MG3694C.MG3694C.get_Data"><code class="docutils literal notranslate"><span class="pre">MG3694C.get_Data()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MG3694C.MG3694C.query"><code class="docutils literal notranslate"><span class="pre">MG3694C.query()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MG3694C.MG3694C.set_OutputPowerLevel"><code class="docutils literal notranslate"><span class="pre">MG3694C.set_OutputPowerLevel()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MG3694C.MG3694C.set_am_internalFreq"><code class="docutils literal notranslate"><span class="pre">MG3694C.set_am_internalFreq()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MG3694C.MG3694C.set_am_internalWave"><code class="docutils literal notranslate"><span class="pre">MG3694C.set_am_internalWave()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MG3694C.MG3694C.set_am_logDepth"><code class="docutils literal notranslate"><span class="pre">MG3694C.set_am_logDepth()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MG3694C.MG3694C.set_am_logsens"><code class="docutils literal notranslate"><span class="pre">MG3694C.set_am_logsens()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MG3694C.MG3694C.set_am_state"><code class="docutils literal notranslate"><span class="pre">MG3694C.set_am_state()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MG3694C.MG3694C.set_am_type"><code class="docutils literal notranslate"><span class="pre">MG3694C.set_am_type()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MG3694C.MG3694C.set_correctionCommands"><code class="docutils literal notranslate"><span class="pre">MG3694C.set_correctionCommands()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MG3694C.MG3694C.set_fm_Bwidth"><code class="docutils literal notranslate"><span class="pre">MG3694C.set_fm_Bwidth()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MG3694C.MG3694C.set_fm_internalFreq"><code class="docutils literal notranslate"><span class="pre">MG3694C.set_fm_internalFreq()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MG3694C.MG3694C.set_fm_internalWave"><code class="docutils literal notranslate"><span class="pre">MG3694C.set_fm_internalWave()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MG3694C.MG3694C.set_fm_mode"><code class="docutils literal notranslate"><span class="pre">MG3694C.set_fm_mode()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MG3694C.MG3694C.set_fm_steta"><code class="docutils literal notranslate"><span class="pre">MG3694C.set_fm_steta()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MG3694C.MG3694C.set_freq_CW"><code class="docutils literal notranslate"><span class="pre">MG3694C.set_freq_CW()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MG3694C.MG3694C.set_freq_cent"><code class="docutils literal notranslate"><span class="pre">MG3694C.set_freq_cent()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MG3694C.MG3694C.set_freq_mode"><code class="docutils literal notranslate"><span class="pre">MG3694C.set_freq_mode()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MG3694C.MG3694C.set_freq_span"><code class="docutils literal notranslate"><span class="pre">MG3694C.set_freq_span()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MG3694C.MG3694C.set_freq_start"><code class="docutils literal notranslate"><span class="pre">MG3694C.set_freq_start()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MG3694C.MG3694C.set_freq_step"><code class="docutils literal notranslate"><span class="pre">MG3694C.set_freq_step()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MG3694C.MG3694C.set_freq_stop"><code class="docutils literal notranslate"><span class="pre">MG3694C.set_freq_stop()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MG3694C.MG3694C.set_output"><code class="docutils literal notranslate"><span class="pre">MG3694C.set_output()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MG3694C.MG3694C.set_output_protection"><code class="docutils literal notranslate"><span class="pre">MG3694C.set_output_protection()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MG3694C.MG3694C.set_output_retrace"><code class="docutils literal notranslate"><span class="pre">MG3694C.set_output_retrace()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MG3694C.MG3694C.set_pm_Bwidth"><code class="docutils literal notranslate"><span class="pre">MG3694C.set_pm_Bwidth()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MG3694C.MG3694C.set_pm_internalFreq"><code class="docutils literal notranslate"><span class="pre">MG3694C.set_pm_internalFreq()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MG3694C.MG3694C.set_pm_internalWave"><code class="docutils literal notranslate"><span class="pre">MG3694C.set_pm_internalWave()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MG3694C.MG3694C.set_pm_state"><code class="docutils literal notranslate"><span class="pre">MG3694C.set_pm_state()</span></code></a></li>
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Anritsu Signal Generator MG3694C module</a><ul>
+<li><a class="reference internal" href="#MG3694C.MG3694C"><code class="docutils literal notranslate"><span class="pre">MG3694C</span></code></a><ul>
+<li><a class="reference internal" href="#MG3694C.MG3694C.Close"><code class="docutils literal notranslate"><span class="pre">MG3694C.Close()</span></code></a></li>
+<li><a class="reference internal" href="#MG3694C.MG3694C.DisplayParamDict"><code class="docutils literal notranslate"><span class="pre">MG3694C.DisplayParamDict()</span></code></a></li>
+<li><a class="reference internal" href="#MG3694C.MG3694C.abort"><code class="docutils literal notranslate"><span class="pre">MG3694C.abort()</span></code></a></li>
+<li><a class="reference internal" href="#MG3694C.MG3694C.ask_MaximalPowerLevel"><code class="docutils literal notranslate"><span class="pre">MG3694C.ask_MaximalPowerLevel()</span></code></a></li>
+<li><a class="reference internal" href="#MG3694C.MG3694C.ask_OutputPowerLevel"><code class="docutils literal notranslate"><span class="pre">MG3694C.ask_OutputPowerLevel()</span></code></a></li>
+<li><a class="reference internal" href="#MG3694C.MG3694C.ask_am_internalFreq"><code class="docutils literal notranslate"><span class="pre">MG3694C.ask_am_internalFreq()</span></code></a></li>
+<li><a class="reference internal" href="#MG3694C.MG3694C.ask_am_internalWave"><code class="docutils literal notranslate"><span class="pre">MG3694C.ask_am_internalWave()</span></code></a></li>
+<li><a class="reference internal" href="#MG3694C.MG3694C.ask_am_logDepth"><code class="docutils literal notranslate"><span class="pre">MG3694C.ask_am_logDepth()</span></code></a></li>
+<li><a class="reference internal" href="#MG3694C.MG3694C.ask_am_logsens"><code class="docutils literal notranslate"><span class="pre">MG3694C.ask_am_logsens()</span></code></a></li>
+<li><a class="reference internal" href="#MG3694C.MG3694C.ask_am_state"><code class="docutils literal notranslate"><span class="pre">MG3694C.ask_am_state()</span></code></a></li>
+<li><a class="reference internal" href="#MG3694C.MG3694C.ask_am_type"><code class="docutils literal notranslate"><span class="pre">MG3694C.ask_am_type()</span></code></a></li>
+<li><a class="reference internal" href="#MG3694C.MG3694C.ask_fm_Bwidth"><code class="docutils literal notranslate"><span class="pre">MG3694C.ask_fm_Bwidth()</span></code></a></li>
+<li><a class="reference internal" href="#MG3694C.MG3694C.ask_fm_internalFreq"><code class="docutils literal notranslate"><span class="pre">MG3694C.ask_fm_internalFreq()</span></code></a></li>
+<li><a class="reference internal" href="#MG3694C.MG3694C.ask_fm_internalWave"><code class="docutils literal notranslate"><span class="pre">MG3694C.ask_fm_internalWave()</span></code></a></li>
+<li><a class="reference internal" href="#MG3694C.MG3694C.ask_fm_mode"><code class="docutils literal notranslate"><span class="pre">MG3694C.ask_fm_mode()</span></code></a></li>
+<li><a class="reference internal" href="#MG3694C.MG3694C.ask_fm_state"><code class="docutils literal notranslate"><span class="pre">MG3694C.ask_fm_state()</span></code></a></li>
+<li><a class="reference internal" href="#MG3694C.MG3694C.ask_freq_CW"><code class="docutils literal notranslate"><span class="pre">MG3694C.ask_freq_CW()</span></code></a></li>
+<li><a class="reference internal" href="#MG3694C.MG3694C.ask_freq_centerFreq"><code class="docutils literal notranslate"><span class="pre">MG3694C.ask_freq_centerFreq()</span></code></a></li>
+<li><a class="reference internal" href="#MG3694C.MG3694C.ask_freq_mode"><code class="docutils literal notranslate"><span class="pre">MG3694C.ask_freq_mode()</span></code></a></li>
+<li><a class="reference internal" href="#MG3694C.MG3694C.ask_freq_span"><code class="docutils literal notranslate"><span class="pre">MG3694C.ask_freq_span()</span></code></a></li>
+<li><a class="reference internal" href="#MG3694C.MG3694C.ask_freq_start"><code class="docutils literal notranslate"><span class="pre">MG3694C.ask_freq_start()</span></code></a></li>
+<li><a class="reference internal" href="#MG3694C.MG3694C.ask_freq_step"><code class="docutils literal notranslate"><span class="pre">MG3694C.ask_freq_step()</span></code></a></li>
+<li><a class="reference internal" href="#MG3694C.MG3694C.ask_freq_stop"><code class="docutils literal notranslate"><span class="pre">MG3694C.ask_freq_stop()</span></code></a></li>
+<li><a class="reference internal" href="#MG3694C.MG3694C.ask_freq_unit"><code class="docutils literal notranslate"><span class="pre">MG3694C.ask_freq_unit()</span></code></a></li>
+<li><a class="reference internal" href="#MG3694C.MG3694C.ask_output_impedance"><code class="docutils literal notranslate"><span class="pre">MG3694C.ask_output_impedance()</span></code></a></li>
+<li><a class="reference internal" href="#MG3694C.MG3694C.ask_output_protection"><code class="docutils literal notranslate"><span class="pre">MG3694C.ask_output_protection()</span></code></a></li>
+<li><a class="reference internal" href="#MG3694C.MG3694C.ask_output_retrace"><code class="docutils literal notranslate"><span class="pre">MG3694C.ask_output_retrace()</span></code></a></li>
+<li><a class="reference internal" href="#MG3694C.MG3694C.ask_pm_Bwidth"><code class="docutils literal notranslate"><span class="pre">MG3694C.ask_pm_Bwidth()</span></code></a></li>
+<li><a class="reference internal" href="#MG3694C.MG3694C.ask_pm_internalFreq"><code class="docutils literal notranslate"><span class="pre">MG3694C.ask_pm_internalFreq()</span></code></a></li>
+<li><a class="reference internal" href="#MG3694C.MG3694C.ask_pm_internalWave"><code class="docutils literal notranslate"><span class="pre">MG3694C.ask_pm_internalWave()</span></code></a></li>
+<li><a class="reference internal" href="#MG3694C.MG3694C.ask_pm_state"><code class="docutils literal notranslate"><span class="pre">MG3694C.ask_pm_state()</span></code></a></li>
+<li><a class="reference internal" href="#MG3694C.MG3694C.get_Data"><code class="docutils literal notranslate"><span class="pre">MG3694C.get_Data()</span></code></a></li>
+<li><a class="reference internal" href="#MG3694C.MG3694C.query"><code class="docutils literal notranslate"><span class="pre">MG3694C.query()</span></code></a></li>
+<li><a class="reference internal" href="#MG3694C.MG3694C.set_OutputPowerLevel"><code class="docutils literal notranslate"><span class="pre">MG3694C.set_OutputPowerLevel()</span></code></a></li>
+<li><a class="reference internal" href="#MG3694C.MG3694C.set_am_internalFreq"><code class="docutils literal notranslate"><span class="pre">MG3694C.set_am_internalFreq()</span></code></a></li>
+<li><a class="reference internal" href="#MG3694C.MG3694C.set_am_internalWave"><code class="docutils literal notranslate"><span class="pre">MG3694C.set_am_internalWave()</span></code></a></li>
+<li><a class="reference internal" href="#MG3694C.MG3694C.set_am_logDepth"><code class="docutils literal notranslate"><span class="pre">MG3694C.set_am_logDepth()</span></code></a></li>
+<li><a class="reference internal" href="#MG3694C.MG3694C.set_am_logsens"><code class="docutils literal notranslate"><span class="pre">MG3694C.set_am_logsens()</span></code></a></li>
+<li><a class="reference internal" href="#MG3694C.MG3694C.set_am_state"><code class="docutils literal notranslate"><span class="pre">MG3694C.set_am_state()</span></code></a></li>
+<li><a class="reference internal" href="#MG3694C.MG3694C.set_am_type"><code class="docutils literal notranslate"><span class="pre">MG3694C.set_am_type()</span></code></a></li>
+<li><a class="reference internal" href="#MG3694C.MG3694C.set_correctionCommands"><code class="docutils literal notranslate"><span class="pre">MG3694C.set_correctionCommands()</span></code></a></li>
+<li><a class="reference internal" href="#MG3694C.MG3694C.set_fm_Bwidth"><code class="docutils literal notranslate"><span class="pre">MG3694C.set_fm_Bwidth()</span></code></a></li>
+<li><a class="reference internal" href="#MG3694C.MG3694C.set_fm_internalFreq"><code class="docutils literal notranslate"><span class="pre">MG3694C.set_fm_internalFreq()</span></code></a></li>
+<li><a class="reference internal" href="#MG3694C.MG3694C.set_fm_internalWave"><code class="docutils literal notranslate"><span class="pre">MG3694C.set_fm_internalWave()</span></code></a></li>
+<li><a class="reference internal" href="#MG3694C.MG3694C.set_fm_mode"><code class="docutils literal notranslate"><span class="pre">MG3694C.set_fm_mode()</span></code></a></li>
+<li><a class="reference internal" href="#MG3694C.MG3694C.set_fm_steta"><code class="docutils literal notranslate"><span class="pre">MG3694C.set_fm_steta()</span></code></a></li>
+<li><a class="reference internal" href="#MG3694C.MG3694C.set_freq_CW"><code class="docutils literal notranslate"><span class="pre">MG3694C.set_freq_CW()</span></code></a></li>
+<li><a class="reference internal" href="#MG3694C.MG3694C.set_freq_cent"><code class="docutils literal notranslate"><span class="pre">MG3694C.set_freq_cent()</span></code></a></li>
+<li><a class="reference internal" href="#MG3694C.MG3694C.set_freq_mode"><code class="docutils literal notranslate"><span class="pre">MG3694C.set_freq_mode()</span></code></a></li>
+<li><a class="reference internal" href="#MG3694C.MG3694C.set_freq_span"><code class="docutils literal notranslate"><span class="pre">MG3694C.set_freq_span()</span></code></a></li>
+<li><a class="reference internal" href="#MG3694C.MG3694C.set_freq_start"><code class="docutils literal notranslate"><span class="pre">MG3694C.set_freq_start()</span></code></a></li>
+<li><a class="reference internal" href="#MG3694C.MG3694C.set_freq_step"><code class="docutils literal notranslate"><span class="pre">MG3694C.set_freq_step()</span></code></a></li>
+<li><a class="reference internal" href="#MG3694C.MG3694C.set_freq_stop"><code class="docutils literal notranslate"><span class="pre">MG3694C.set_freq_stop()</span></code></a></li>
+<li><a class="reference internal" href="#MG3694C.MG3694C.set_output"><code class="docutils literal notranslate"><span class="pre">MG3694C.set_output()</span></code></a></li>
+<li><a class="reference internal" href="#MG3694C.MG3694C.set_output_protection"><code class="docutils literal notranslate"><span class="pre">MG3694C.set_output_protection()</span></code></a></li>
+<li><a class="reference internal" href="#MG3694C.MG3694C.set_output_retrace"><code class="docutils literal notranslate"><span class="pre">MG3694C.set_output_retrace()</span></code></a></li>
+<li><a class="reference internal" href="#MG3694C.MG3694C.set_pm_Bwidth"><code class="docutils literal notranslate"><span class="pre">MG3694C.set_pm_Bwidth()</span></code></a></li>
+<li><a class="reference internal" href="#MG3694C.MG3694C.set_pm_internalFreq"><code class="docutils literal notranslate"><span class="pre">MG3694C.set_pm_internalFreq()</span></code></a></li>
+<li><a class="reference internal" href="#MG3694C.MG3694C.set_pm_internalWave"><code class="docutils literal notranslate"><span class="pre">MG3694C.set_pm_internalWave()</span></code></a></li>
+<li><a class="reference internal" href="#MG3694C.MG3694C.set_pm_state"><code class="docutils literal notranslate"><span class="pre">MG3694C.set_pm_state()</span></code></a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="AQ6370D.html">AQ6370D module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="KA3005.html">KA3005 module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="PM100D.html">PM100D module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="MS4647B.html">MS4647B module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="MS2760A.html">MS2760A module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="LU1000.html">LU1000 module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="KEITHLEY2612.html">KEITHLEY2612 module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="APPH.html">APPH module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CoBrite.html">CoBrite module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="GPP4323.html">GPP4323 module</a></li>
 </ul>
-
+</div>
         </div>
       </div>
     </nav>
@@ -138,7 +126,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">MG3694C module</li>
+      <li class="breadcrumb-item active">Anritsu Signal Generator MG3694C module</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/rst/MG3694C.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -148,9 +136,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="module-MG3694C">
-<span id="mg3694c-module"></span><h1>MG3694C module<a class="headerlink" href="#module-MG3694C" title="Link to this heading"></a></h1>
-<p>Created on Wed Dec  1 07:00:19 2021</p>
+  <section id="anritsu-signal-generator-mg3694c-module">
+<h1>Anritsu Signal Generator MG3694C module<a class="headerlink" href="#anritsu-signal-generator-mg3694c-module" title="Link to this heading"></a></h1>
+<p id="module-MG3694C">Created on Wed Dec  1 07:00:19 2021</p>
 <p>&#64;author: Martin.Mihylov</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="MG3694C.MG3694C">
@@ -1165,10 +1153,7 @@ Default: OFF</p>
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../index.html" class="btn btn-neutral float-left" title="Welcome to Instruments Automatisation Libraries’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="AQ6370D.html" class="btn btn-neutral float-right" title="AQ6370D module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+          <footer>
 
   <hr/>
 

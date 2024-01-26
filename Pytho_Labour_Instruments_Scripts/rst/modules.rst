@@ -2,9 +2,9 @@ source
 ======
 
 .. toctree::
-   :maxdepth: 4
+   :maxdepth: 13
 
-   APPH
+   APPH20G
    AQ6370D
    CoBrite
    GPP4323

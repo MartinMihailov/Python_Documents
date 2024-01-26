@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MS4647B module &mdash; Instruments Automatisation Libraries 1.0 documentation</title>
+  <title>Anritsu Vectro Analyzer MS4647B module &mdash; Instruments Automatisation Libraries 1.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
 
@@ -20,9 +20,7 @@
         <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="MS2760A module" href="MS2760A.html" />
-    <link rel="prev" title="PM100D module" href="PM100D.html" /> 
+    <link rel="search" title="Search" href="../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -44,96 +42,86 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="MG3694C.html">MG3694C module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AQ6370D.html">AQ6370D module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="KA3005.html">KA3005 module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="PM100D.html">PM100D module</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">MS4647B module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#MS4647B.MS4647B"><code class="docutils literal notranslate"><span class="pre">MS4647B</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.Close"><code class="docutils literal notranslate"><span class="pre">MS4647B.Close()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.DeleteData"><code class="docutils literal notranslate"><span class="pre">MS4647B.DeleteData()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.DeleteDataCSV"><code class="docutils literal notranslate"><span class="pre">MS4647B.DeleteDataCSV()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.RTL"><code class="docutils literal notranslate"><span class="pre">MS4647B.RTL()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.SaveData"><code class="docutils literal notranslate"><span class="pre">MS4647B.SaveData()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.SaveDataCSV"><code class="docutils literal notranslate"><span class="pre">MS4647B.SaveDataCSV()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.SaveImage"><code class="docutils literal notranslate"><span class="pre">MS4647B.SaveImage()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.SaveTransferData"><code class="docutils literal notranslate"><span class="pre">MS4647B.SaveTransferData()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.SaveTransferDataCSV"><code class="docutils literal notranslate"><span class="pre">MS4647B.SaveTransferDataCSV()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.ask_AssignetDataPort"><code class="docutils literal notranslate"><span class="pre">MS4647B.ask_AssignetDataPort()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.ask_AverageCount"><code class="docutils literal notranslate"><span class="pre">MS4647B.ask_AverageCount()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.ask_AverageFunctionType"><code class="docutils literal notranslate"><span class="pre">MS4647B.ask_AverageFunctionType()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.ask_CWFreq"><code class="docutils literal notranslate"><span class="pre">MS4647B.ask_CWFreq()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.ask_CenterFreq"><code class="docutils literal notranslate"><span class="pre">MS4647B.ask_CenterFreq()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.ask_DataFreq"><code class="docutils literal notranslate"><span class="pre">MS4647B.ask_DataFreq()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.ask_DisplayCount"><code class="docutils literal notranslate"><span class="pre">MS4647B.ask_DisplayCount()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.ask_DisplayTitle"><code class="docutils literal notranslate"><span class="pre">MS4647B.ask_DisplayTitle()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.ask_DisplayTrace"><code class="docutils literal notranslate"><span class="pre">MS4647B.ask_DisplayTrace()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.ask_FreqSpan"><code class="docutils literal notranslate"><span class="pre">MS4647B.ask_FreqSpan()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.ask_ParamFormInFile"><code class="docutils literal notranslate"><span class="pre">MS4647B.ask_ParamFormInFile()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.ask_PowerOnPort"><code class="docutils literal notranslate"><span class="pre">MS4647B.ask_PowerOnPort()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.ask_RFState"><code class="docutils literal notranslate"><span class="pre">MS4647B.ask_RFState()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.ask_ResolutionBW"><code class="docutils literal notranslate"><span class="pre">MS4647B.ask_ResolutionBW()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.ask_SelectParameter"><code class="docutils literal notranslate"><span class="pre">MS4647B.ask_SelectParameter()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.ask_SetAverageState"><code class="docutils literal notranslate"><span class="pre">MS4647B.ask_SetAverageState()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.ask_SmoothingState"><code class="docutils literal notranslate"><span class="pre">MS4647B.ask_SmoothingState()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.ask_StatOperation"><code class="docutils literal notranslate"><span class="pre">MS4647B.ask_StatOperation()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.ask_StatOperationRegister"><code class="docutils literal notranslate"><span class="pre">MS4647B.ask_StatOperationRegister()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.ask_SubSystem"><code class="docutils literal notranslate"><span class="pre">MS4647B.ask_SubSystem()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.ask_SweepChannelStatus"><code class="docutils literal notranslate"><span class="pre">MS4647B.ask_SweepChannelStatus()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.ask_SweepCount"><code class="docutils literal notranslate"><span class="pre">MS4647B.ask_SweepCount()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.ask_SweepDelay"><code class="docutils literal notranslate"><span class="pre">MS4647B.ask_SweepDelay()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.ask_SweepTime"><code class="docutils literal notranslate"><span class="pre">MS4647B.ask_SweepTime()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.ask_SysErrors"><code class="docutils literal notranslate"><span class="pre">MS4647B.ask_SysErrors()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.ask_TestSet"><code class="docutils literal notranslate"><span class="pre">MS4647B.ask_TestSet()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.ask_TransferData"><code class="docutils literal notranslate"><span class="pre">MS4647B.ask_TransferData()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.ask_TransferDataCSV"><code class="docutils literal notranslate"><span class="pre">MS4647B.ask_TransferDataCSV()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.getIdn"><code class="docutils literal notranslate"><span class="pre">MS4647B.getIdn()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.query"><code class="docutils literal notranslate"><span class="pre">MS4647B.query()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.set_AssignetDataPort"><code class="docutils literal notranslate"><span class="pre">MS4647B.set_AssignetDataPort()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.set_AverageCount"><code class="docutils literal notranslate"><span class="pre">MS4647B.set_AverageCount()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.set_AverageFunctionType"><code class="docutils literal notranslate"><span class="pre">MS4647B.set_AverageFunctionType()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.set_CWFreq"><code class="docutils literal notranslate"><span class="pre">MS4647B.set_CWFreq()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.set_CenterFreq"><code class="docutils literal notranslate"><span class="pre">MS4647B.set_CenterFreq()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.set_ClearAverage"><code class="docutils literal notranslate"><span class="pre">MS4647B.set_ClearAverage()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.set_ClearError"><code class="docutils literal notranslate"><span class="pre">MS4647B.set_ClearError()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.set_DisplayColorReset"><code class="docutils literal notranslate"><span class="pre">MS4647B.set_DisplayColorReset()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.set_DisplayCount"><code class="docutils literal notranslate"><span class="pre">MS4647B.set_DisplayCount()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.set_DisplayScale"><code class="docutils literal notranslate"><span class="pre">MS4647B.set_DisplayScale()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.set_DisplayTitle"><code class="docutils literal notranslate"><span class="pre">MS4647B.set_DisplayTitle()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.set_DisplayTrace"><code class="docutils literal notranslate"><span class="pre">MS4647B.set_DisplayTrace()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.set_ParamFormInFile"><code class="docutils literal notranslate"><span class="pre">MS4647B.set_ParamFormInFile()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.set_PowerOnPort"><code class="docutils literal notranslate"><span class="pre">MS4647B.set_PowerOnPort()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.set_RFState"><code class="docutils literal notranslate"><span class="pre">MS4647B.set_RFState()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.set_ResolutionBW"><code class="docutils literal notranslate"><span class="pre">MS4647B.set_ResolutionBW()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.set_SelectParameter"><code class="docutils literal notranslate"><span class="pre">MS4647B.set_SelectParameter()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.set_SetAverageState"><code class="docutils literal notranslate"><span class="pre">MS4647B.set_SetAverageState()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.set_SmoothingAPERture"><code class="docutils literal notranslate"><span class="pre">MS4647B.set_SmoothingAPERture()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.set_SmoothingState"><code class="docutils literal notranslate"><span class="pre">MS4647B.set_SmoothingState()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.set_StartFreq"><code class="docutils literal notranslate"><span class="pre">MS4647B.set_StartFreq()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.set_StatOperationRegister"><code class="docutils literal notranslate"><span class="pre">MS4647B.set_StatOperationRegister()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.set_StopFreq"><code class="docutils literal notranslate"><span class="pre">MS4647B.set_StopFreq()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.set_SubSystemCont"><code class="docutils literal notranslate"><span class="pre">MS4647B.set_SubSystemCont()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.set_SubSystemHold"><code class="docutils literal notranslate"><span class="pre">MS4647B.set_SubSystemHold()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.set_SubSystemSing"><code class="docutils literal notranslate"><span class="pre">MS4647B.set_SubSystemSing()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.set_SweepChannelStatus"><code class="docutils literal notranslate"><span class="pre">MS4647B.set_SweepChannelStatus()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.set_SweepDelay"><code class="docutils literal notranslate"><span class="pre">MS4647B.set_SweepDelay()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.set_SweepTime"><code class="docutils literal notranslate"><span class="pre">MS4647B.set_SweepTime()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.set_TS3739"><code class="docutils literal notranslate"><span class="pre">MS4647B.set_TS3739()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS4647B.MS4647B.write"><code class="docutils literal notranslate"><span class="pre">MS4647B.write()</span></code></a></li>
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Anritsu Vectro Analyzer MS4647B module</a><ul>
+<li><a class="reference internal" href="#MS4647B.MS4647B"><code class="docutils literal notranslate"><span class="pre">MS4647B</span></code></a><ul>
+<li><a class="reference internal" href="#MS4647B.MS4647B.Close"><code class="docutils literal notranslate"><span class="pre">MS4647B.Close()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.DeleteData"><code class="docutils literal notranslate"><span class="pre">MS4647B.DeleteData()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.DeleteDataCSV"><code class="docutils literal notranslate"><span class="pre">MS4647B.DeleteDataCSV()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.RTL"><code class="docutils literal notranslate"><span class="pre">MS4647B.RTL()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.SaveData"><code class="docutils literal notranslate"><span class="pre">MS4647B.SaveData()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.SaveDataCSV"><code class="docutils literal notranslate"><span class="pre">MS4647B.SaveDataCSV()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.SaveImage"><code class="docutils literal notranslate"><span class="pre">MS4647B.SaveImage()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.SaveTransferData"><code class="docutils literal notranslate"><span class="pre">MS4647B.SaveTransferData()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.SaveTransferDataCSV"><code class="docutils literal notranslate"><span class="pre">MS4647B.SaveTransferDataCSV()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.ask_AssignetDataPort"><code class="docutils literal notranslate"><span class="pre">MS4647B.ask_AssignetDataPort()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.ask_AverageCount"><code class="docutils literal notranslate"><span class="pre">MS4647B.ask_AverageCount()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.ask_AverageFunctionType"><code class="docutils literal notranslate"><span class="pre">MS4647B.ask_AverageFunctionType()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.ask_CWFreq"><code class="docutils literal notranslate"><span class="pre">MS4647B.ask_CWFreq()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.ask_CenterFreq"><code class="docutils literal notranslate"><span class="pre">MS4647B.ask_CenterFreq()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.ask_DataFreq"><code class="docutils literal notranslate"><span class="pre">MS4647B.ask_DataFreq()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.ask_DisplayCount"><code class="docutils literal notranslate"><span class="pre">MS4647B.ask_DisplayCount()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.ask_DisplayTitle"><code class="docutils literal notranslate"><span class="pre">MS4647B.ask_DisplayTitle()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.ask_DisplayTrace"><code class="docutils literal notranslate"><span class="pre">MS4647B.ask_DisplayTrace()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.ask_FreqSpan"><code class="docutils literal notranslate"><span class="pre">MS4647B.ask_FreqSpan()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.ask_ParamFormInFile"><code class="docutils literal notranslate"><span class="pre">MS4647B.ask_ParamFormInFile()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.ask_PowerOnPort"><code class="docutils literal notranslate"><span class="pre">MS4647B.ask_PowerOnPort()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.ask_RFState"><code class="docutils literal notranslate"><span class="pre">MS4647B.ask_RFState()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.ask_ResolutionBW"><code class="docutils literal notranslate"><span class="pre">MS4647B.ask_ResolutionBW()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.ask_SelectParameter"><code class="docutils literal notranslate"><span class="pre">MS4647B.ask_SelectParameter()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.ask_SetAverageState"><code class="docutils literal notranslate"><span class="pre">MS4647B.ask_SetAverageState()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.ask_SmoothingState"><code class="docutils literal notranslate"><span class="pre">MS4647B.ask_SmoothingState()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.ask_StatOperation"><code class="docutils literal notranslate"><span class="pre">MS4647B.ask_StatOperation()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.ask_StatOperationRegister"><code class="docutils literal notranslate"><span class="pre">MS4647B.ask_StatOperationRegister()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.ask_SubSystem"><code class="docutils literal notranslate"><span class="pre">MS4647B.ask_SubSystem()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.ask_SweepChannelStatus"><code class="docutils literal notranslate"><span class="pre">MS4647B.ask_SweepChannelStatus()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.ask_SweepCount"><code class="docutils literal notranslate"><span class="pre">MS4647B.ask_SweepCount()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.ask_SweepDelay"><code class="docutils literal notranslate"><span class="pre">MS4647B.ask_SweepDelay()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.ask_SweepTime"><code class="docutils literal notranslate"><span class="pre">MS4647B.ask_SweepTime()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.ask_SysErrors"><code class="docutils literal notranslate"><span class="pre">MS4647B.ask_SysErrors()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.ask_TestSet"><code class="docutils literal notranslate"><span class="pre">MS4647B.ask_TestSet()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.ask_TransferData"><code class="docutils literal notranslate"><span class="pre">MS4647B.ask_TransferData()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.ask_TransferDataCSV"><code class="docutils literal notranslate"><span class="pre">MS4647B.ask_TransferDataCSV()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.getIdn"><code class="docutils literal notranslate"><span class="pre">MS4647B.getIdn()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.query"><code class="docutils literal notranslate"><span class="pre">MS4647B.query()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.set_AssignetDataPort"><code class="docutils literal notranslate"><span class="pre">MS4647B.set_AssignetDataPort()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.set_AverageCount"><code class="docutils literal notranslate"><span class="pre">MS4647B.set_AverageCount()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.set_AverageFunctionType"><code class="docutils literal notranslate"><span class="pre">MS4647B.set_AverageFunctionType()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.set_CWFreq"><code class="docutils literal notranslate"><span class="pre">MS4647B.set_CWFreq()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.set_CenterFreq"><code class="docutils literal notranslate"><span class="pre">MS4647B.set_CenterFreq()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.set_ClearAverage"><code class="docutils literal notranslate"><span class="pre">MS4647B.set_ClearAverage()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.set_ClearError"><code class="docutils literal notranslate"><span class="pre">MS4647B.set_ClearError()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.set_DisplayColorReset"><code class="docutils literal notranslate"><span class="pre">MS4647B.set_DisplayColorReset()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.set_DisplayCount"><code class="docutils literal notranslate"><span class="pre">MS4647B.set_DisplayCount()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.set_DisplayScale"><code class="docutils literal notranslate"><span class="pre">MS4647B.set_DisplayScale()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.set_DisplayTitle"><code class="docutils literal notranslate"><span class="pre">MS4647B.set_DisplayTitle()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.set_DisplayTrace"><code class="docutils literal notranslate"><span class="pre">MS4647B.set_DisplayTrace()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.set_ParamFormInFile"><code class="docutils literal notranslate"><span class="pre">MS4647B.set_ParamFormInFile()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.set_PowerOnPort"><code class="docutils literal notranslate"><span class="pre">MS4647B.set_PowerOnPort()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.set_RFState"><code class="docutils literal notranslate"><span class="pre">MS4647B.set_RFState()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.set_ResolutionBW"><code class="docutils literal notranslate"><span class="pre">MS4647B.set_ResolutionBW()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.set_SelectParameter"><code class="docutils literal notranslate"><span class="pre">MS4647B.set_SelectParameter()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.set_SetAverageState"><code class="docutils literal notranslate"><span class="pre">MS4647B.set_SetAverageState()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.set_SmoothingAPERture"><code class="docutils literal notranslate"><span class="pre">MS4647B.set_SmoothingAPERture()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.set_SmoothingState"><code class="docutils literal notranslate"><span class="pre">MS4647B.set_SmoothingState()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.set_StartFreq"><code class="docutils literal notranslate"><span class="pre">MS4647B.set_StartFreq()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.set_StatOperationRegister"><code class="docutils literal notranslate"><span class="pre">MS4647B.set_StatOperationRegister()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.set_StopFreq"><code class="docutils literal notranslate"><span class="pre">MS4647B.set_StopFreq()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.set_SubSystemCont"><code class="docutils literal notranslate"><span class="pre">MS4647B.set_SubSystemCont()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.set_SubSystemHold"><code class="docutils literal notranslate"><span class="pre">MS4647B.set_SubSystemHold()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.set_SubSystemSing"><code class="docutils literal notranslate"><span class="pre">MS4647B.set_SubSystemSing()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.set_SweepChannelStatus"><code class="docutils literal notranslate"><span class="pre">MS4647B.set_SweepChannelStatus()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.set_SweepDelay"><code class="docutils literal notranslate"><span class="pre">MS4647B.set_SweepDelay()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.set_SweepTime"><code class="docutils literal notranslate"><span class="pre">MS4647B.set_SweepTime()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.set_TS3739"><code class="docutils literal notranslate"><span class="pre">MS4647B.set_TS3739()</span></code></a></li>
+<li><a class="reference internal" href="#MS4647B.MS4647B.write"><code class="docutils literal notranslate"><span class="pre">MS4647B.write()</span></code></a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="MS2760A.html">MS2760A module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="LU1000.html">LU1000 module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="KEITHLEY2612.html">KEITHLEY2612 module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="APPH.html">APPH module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CoBrite.html">CoBrite module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="GPP4323.html">GPP4323 module</a></li>
 </ul>
-
+</div>
         </div>
       </div>
     </nav>
@@ -148,7 +136,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">MS4647B module</li>
+      <li class="breadcrumb-item active">Anritsu Vectro Analyzer MS4647B module</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/rst/MS4647B.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -158,9 +146,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="module-MS4647B">
-<span id="ms4647b-module"></span><h1>MS4647B module<a class="headerlink" href="#module-MS4647B" title="Link to this heading"></a></h1>
-<p>Created on Mon Dec 13 10:40:31 2021</p>
+  <section id="anritsu-vectro-analyzer-ms4647b-module">
+<h1>Anritsu Vectro Analyzer MS4647B module<a class="headerlink" href="#anritsu-vectro-analyzer-ms4647b-module" title="Link to this heading"></a></h1>
+<p id="module-MS4647B">Created on Mon Dec 13 10:40:31 2021</p>
 <p>&#64;author: Martin.Mihaylov</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="MS4647B.MS4647B">
@@ -1359,10 +1347,7 @@ control the VectorStar ME7838x  Broadband/Millimeter-Wave 3738A Test Set.</p>
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="PM100D.html" class="btn btn-neutral float-left" title="PM100D module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="MS2760A.html" class="btn btn-neutral float-right" title="MS2760A module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+          <footer>
 
   <hr/>
 

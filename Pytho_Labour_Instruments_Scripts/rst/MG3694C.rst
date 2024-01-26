@@ -1,4 +1,4 @@
-MG3694C module
+Anritsu Signal Generator MG3694C module
 ==============
 
 .. automodule:: MG3694C

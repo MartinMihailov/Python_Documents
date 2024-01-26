@@ -1,4 +1,4 @@
-MS4647B module
+Anritsu Vectro Analyzer MS4647B module
 ==============
 
 .. automodule:: MS4647B

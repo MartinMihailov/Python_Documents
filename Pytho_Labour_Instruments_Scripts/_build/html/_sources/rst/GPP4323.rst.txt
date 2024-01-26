@@ -1,4 +1,4 @@
-GPP4323 module
+4 Channels Power Suppy GPP4323 module
 ==============
 
 .. automodule:: GPP4323

@@ -34,10 +34,12 @@ def Paths():
           2) - Select OCT6 directory
     
           ''')
+
     #Path COM
     root = tk.Tk()
     COM = filedialog.askdirectory(parent = root,title = 'Select COM Diretory: ')
     root.destroy()
+    #COM = 'C:/Users/marti/OneDrive/Desktop/WHK Martin/Auto_Measurement/InstrumentControl/COM'
     
     
     
@@ -45,6 +47,7 @@ def Paths():
     root = tk.Tk()
     OCT6 = filedialog.askdirectory(parent = root,title = 'Select COM Diretory: ')
     root.destroy()
+    #OCT6 = 'C:/Users/marti/OneDrive/Desktop/WHK Martin/Auto_Measurement/InstrumentControl/OCT6'
     
     return COM, OCT6
     

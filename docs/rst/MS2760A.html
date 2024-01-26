@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MS2760A module &mdash; Instruments Automatisation Libraries 1.0 documentation</title>
+  <title>Anritsu Vectro Analyzer MS2760A module &mdash; Instruments Automatisation Libraries 1.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
 
@@ -20,9 +20,7 @@
         <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="LU1000 module" href="LU1000.html" />
-    <link rel="prev" title="MS4647B module" href="MS4647B.html" /> 
+    <link rel="search" title="Search" href="../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -44,69 +42,59 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="MG3694C.html">MG3694C module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AQ6370D.html">AQ6370D module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="KA3005.html">KA3005 module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="PM100D.html">PM100D module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="MS4647B.html">MS4647B module</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">MS2760A module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#MS2760A.MS2760A"><code class="docutils literal notranslate"><span class="pre">MS2760A</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#MS2760A.MS2760A.Close"><code class="docutils literal notranslate"><span class="pre">MS2760A.Close()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS2760A.MS2760A.ExtractTtraceData"><code class="docutils literal notranslate"><span class="pre">MS2760A.ExtractTtraceData()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS2760A.MS2760A.Init"><code class="docutils literal notranslate"><span class="pre">MS2760A.Init()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS2760A.MS2760A.OPC"><code class="docutils literal notranslate"><span class="pre">MS2760A.OPC()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS2760A.MS2760A.abort"><code class="docutils literal notranslate"><span class="pre">MS2760A.abort()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS2760A.MS2760A.ask_CHPowerState"><code class="docutils literal notranslate"><span class="pre">MS2760A.ask_CHPowerState()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS2760A.MS2760A.ask_CenterFreq"><code class="docutils literal notranslate"><span class="pre">MS2760A.ask_CenterFreq()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS2760A.MS2760A.ask_Configuration"><code class="docutils literal notranslate"><span class="pre">MS2760A.ask_Configuration()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS2760A.MS2760A.ask_DataFormat"><code class="docutils literal notranslate"><span class="pre">MS2760A.ask_DataFormat()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS2760A.MS2760A.ask_DataPointCount"><code class="docutils literal notranslate"><span class="pre">MS2760A.ask_DataPointCount()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS2760A.MS2760A.ask_MarkerExcursion"><code class="docutils literal notranslate"><span class="pre">MS2760A.ask_MarkerExcursion()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS2760A.MS2760A.ask_MarkerExcursionState"><code class="docutils literal notranslate"><span class="pre">MS2760A.ask_MarkerExcursionState()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS2760A.MS2760A.ask_ResBwidth"><code class="docutils literal notranslate"><span class="pre">MS2760A.ask_ResBwidth()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS2760A.MS2760A.ask_ResBwidthAuto"><code class="docutils literal notranslate"><span class="pre">MS2760A.ask_ResBwidthAuto()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS2760A.MS2760A.ask_SingleOrContinuesMeas"><code class="docutils literal notranslate"><span class="pre">MS2760A.ask_SingleOrContinuesMeas()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS2760A.MS2760A.ask_TraceData"><code class="docutils literal notranslate"><span class="pre">MS2760A.ask_TraceData()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS2760A.MS2760A.ask_TraceSelected"><code class="docutils literal notranslate"><span class="pre">MS2760A.ask_TraceSelected()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS2760A.MS2760A.ask_TraceState"><code class="docutils literal notranslate"><span class="pre">MS2760A.ask_TraceState()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS2760A.MS2760A.ask_TraceType"><code class="docutils literal notranslate"><span class="pre">MS2760A.ask_TraceType()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS2760A.MS2760A.ask_freq_Start"><code class="docutils literal notranslate"><span class="pre">MS2760A.ask_freq_Start()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS2760A.MS2760A.ask_freq_Stop"><code class="docutils literal notranslate"><span class="pre">MS2760A.ask_freq_Stop()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS2760A.MS2760A.ask_sweepTime"><code class="docutils literal notranslate"><span class="pre">MS2760A.ask_sweepTime()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS2760A.MS2760A.get_Data"><code class="docutils literal notranslate"><span class="pre">MS2760A.get_Data()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS2760A.MS2760A.query"><code class="docutils literal notranslate"><span class="pre">MS2760A.query()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS2760A.MS2760A.set_CHPowerState"><code class="docutils literal notranslate"><span class="pre">MS2760A.set_CHPowerState()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS2760A.MS2760A.set_CenterFreq"><code class="docutils literal notranslate"><span class="pre">MS2760A.set_CenterFreq()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS2760A.MS2760A.set_Continuous"><code class="docutils literal notranslate"><span class="pre">MS2760A.set_Continuous()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS2760A.MS2760A.set_ContinuousMeas"><code class="docutils literal notranslate"><span class="pre">MS2760A.set_ContinuousMeas()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS2760A.MS2760A.set_DataFormat"><code class="docutils literal notranslate"><span class="pre">MS2760A.set_DataFormat()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS2760A.MS2760A.set_DataPointCount"><code class="docutils literal notranslate"><span class="pre">MS2760A.set_DataPointCount()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS2760A.MS2760A.set_MarkerExcursion"><code class="docutils literal notranslate"><span class="pre">MS2760A.set_MarkerExcursion()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS2760A.MS2760A.set_MarkerExcursionState"><code class="docutils literal notranslate"><span class="pre">MS2760A.set_MarkerExcursionState()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS2760A.MS2760A.set_MarkerPreset"><code class="docutils literal notranslate"><span class="pre">MS2760A.set_MarkerPreset()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS2760A.MS2760A.set_MaxPeak"><code class="docutils literal notranslate"><span class="pre">MS2760A.set_MaxPeak()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS2760A.MS2760A.set_NextPeak"><code class="docutils literal notranslate"><span class="pre">MS2760A.set_NextPeak()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS2760A.MS2760A.set_ResBwidth"><code class="docutils literal notranslate"><span class="pre">MS2760A.set_ResBwidth()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS2760A.MS2760A.set_ResBwidthAuto"><code class="docutils literal notranslate"><span class="pre">MS2760A.set_ResBwidthAuto()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS2760A.MS2760A.set_TraceSelected"><code class="docutils literal notranslate"><span class="pre">MS2760A.set_TraceSelected()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS2760A.MS2760A.set_TraceState"><code class="docutils literal notranslate"><span class="pre">MS2760A.set_TraceState()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS2760A.MS2760A.set_TraceType"><code class="docutils literal notranslate"><span class="pre">MS2760A.set_TraceType()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS2760A.MS2760A.set_freq_Start"><code class="docutils literal notranslate"><span class="pre">MS2760A.set_freq_Start()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS2760A.MS2760A.set_freq_Stop"><code class="docutils literal notranslate"><span class="pre">MS2760A.set_freq_Stop()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#MS2760A.MS2760A.write"><code class="docutils literal notranslate"><span class="pre">MS2760A.write()</span></code></a></li>
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Anritsu Vectro Analyzer MS2760A module</a><ul>
+<li><a class="reference internal" href="#MS2760A.MS2760A"><code class="docutils literal notranslate"><span class="pre">MS2760A</span></code></a><ul>
+<li><a class="reference internal" href="#MS2760A.MS2760A.Close"><code class="docutils literal notranslate"><span class="pre">MS2760A.Close()</span></code></a></li>
+<li><a class="reference internal" href="#MS2760A.MS2760A.ExtractTtraceData"><code class="docutils literal notranslate"><span class="pre">MS2760A.ExtractTtraceData()</span></code></a></li>
+<li><a class="reference internal" href="#MS2760A.MS2760A.Init"><code class="docutils literal notranslate"><span class="pre">MS2760A.Init()</span></code></a></li>
+<li><a class="reference internal" href="#MS2760A.MS2760A.OPC"><code class="docutils literal notranslate"><span class="pre">MS2760A.OPC()</span></code></a></li>
+<li><a class="reference internal" href="#MS2760A.MS2760A.abort"><code class="docutils literal notranslate"><span class="pre">MS2760A.abort()</span></code></a></li>
+<li><a class="reference internal" href="#MS2760A.MS2760A.ask_CHPowerState"><code class="docutils literal notranslate"><span class="pre">MS2760A.ask_CHPowerState()</span></code></a></li>
+<li><a class="reference internal" href="#MS2760A.MS2760A.ask_CenterFreq"><code class="docutils literal notranslate"><span class="pre">MS2760A.ask_CenterFreq()</span></code></a></li>
+<li><a class="reference internal" href="#MS2760A.MS2760A.ask_Configuration"><code class="docutils literal notranslate"><span class="pre">MS2760A.ask_Configuration()</span></code></a></li>
+<li><a class="reference internal" href="#MS2760A.MS2760A.ask_DataFormat"><code class="docutils literal notranslate"><span class="pre">MS2760A.ask_DataFormat()</span></code></a></li>
+<li><a class="reference internal" href="#MS2760A.MS2760A.ask_DataPointCount"><code class="docutils literal notranslate"><span class="pre">MS2760A.ask_DataPointCount()</span></code></a></li>
+<li><a class="reference internal" href="#MS2760A.MS2760A.ask_MarkerExcursion"><code class="docutils literal notranslate"><span class="pre">MS2760A.ask_MarkerExcursion()</span></code></a></li>
+<li><a class="reference internal" href="#MS2760A.MS2760A.ask_MarkerExcursionState"><code class="docutils literal notranslate"><span class="pre">MS2760A.ask_MarkerExcursionState()</span></code></a></li>
+<li><a class="reference internal" href="#MS2760A.MS2760A.ask_ResBwidth"><code class="docutils literal notranslate"><span class="pre">MS2760A.ask_ResBwidth()</span></code></a></li>
+<li><a class="reference internal" href="#MS2760A.MS2760A.ask_ResBwidthAuto"><code class="docutils literal notranslate"><span class="pre">MS2760A.ask_ResBwidthAuto()</span></code></a></li>
+<li><a class="reference internal" href="#MS2760A.MS2760A.ask_SingleOrContinuesMeas"><code class="docutils literal notranslate"><span class="pre">MS2760A.ask_SingleOrContinuesMeas()</span></code></a></li>
+<li><a class="reference internal" href="#MS2760A.MS2760A.ask_TraceData"><code class="docutils literal notranslate"><span class="pre">MS2760A.ask_TraceData()</span></code></a></li>
+<li><a class="reference internal" href="#MS2760A.MS2760A.ask_TraceSelected"><code class="docutils literal notranslate"><span class="pre">MS2760A.ask_TraceSelected()</span></code></a></li>
+<li><a class="reference internal" href="#MS2760A.MS2760A.ask_TraceState"><code class="docutils literal notranslate"><span class="pre">MS2760A.ask_TraceState()</span></code></a></li>
+<li><a class="reference internal" href="#MS2760A.MS2760A.ask_TraceType"><code class="docutils literal notranslate"><span class="pre">MS2760A.ask_TraceType()</span></code></a></li>
+<li><a class="reference internal" href="#MS2760A.MS2760A.ask_freq_Start"><code class="docutils literal notranslate"><span class="pre">MS2760A.ask_freq_Start()</span></code></a></li>
+<li><a class="reference internal" href="#MS2760A.MS2760A.ask_freq_Stop"><code class="docutils literal notranslate"><span class="pre">MS2760A.ask_freq_Stop()</span></code></a></li>
+<li><a class="reference internal" href="#MS2760A.MS2760A.ask_sweepTime"><code class="docutils literal notranslate"><span class="pre">MS2760A.ask_sweepTime()</span></code></a></li>
+<li><a class="reference internal" href="#MS2760A.MS2760A.get_Data"><code class="docutils literal notranslate"><span class="pre">MS2760A.get_Data()</span></code></a></li>
+<li><a class="reference internal" href="#MS2760A.MS2760A.query"><code class="docutils literal notranslate"><span class="pre">MS2760A.query()</span></code></a></li>
+<li><a class="reference internal" href="#MS2760A.MS2760A.set_CHPowerState"><code class="docutils literal notranslate"><span class="pre">MS2760A.set_CHPowerState()</span></code></a></li>
+<li><a class="reference internal" href="#MS2760A.MS2760A.set_CenterFreq"><code class="docutils literal notranslate"><span class="pre">MS2760A.set_CenterFreq()</span></code></a></li>
+<li><a class="reference internal" href="#MS2760A.MS2760A.set_Continuous"><code class="docutils literal notranslate"><span class="pre">MS2760A.set_Continuous()</span></code></a></li>
+<li><a class="reference internal" href="#MS2760A.MS2760A.set_ContinuousMeas"><code class="docutils literal notranslate"><span class="pre">MS2760A.set_ContinuousMeas()</span></code></a></li>
+<li><a class="reference internal" href="#MS2760A.MS2760A.set_DataFormat"><code class="docutils literal notranslate"><span class="pre">MS2760A.set_DataFormat()</span></code></a></li>
+<li><a class="reference internal" href="#MS2760A.MS2760A.set_DataPointCount"><code class="docutils literal notranslate"><span class="pre">MS2760A.set_DataPointCount()</span></code></a></li>
+<li><a class="reference internal" href="#MS2760A.MS2760A.set_MarkerExcursion"><code class="docutils literal notranslate"><span class="pre">MS2760A.set_MarkerExcursion()</span></code></a></li>
+<li><a class="reference internal" href="#MS2760A.MS2760A.set_MarkerExcursionState"><code class="docutils literal notranslate"><span class="pre">MS2760A.set_MarkerExcursionState()</span></code></a></li>
+<li><a class="reference internal" href="#MS2760A.MS2760A.set_MarkerPreset"><code class="docutils literal notranslate"><span class="pre">MS2760A.set_MarkerPreset()</span></code></a></li>
+<li><a class="reference internal" href="#MS2760A.MS2760A.set_MaxPeak"><code class="docutils literal notranslate"><span class="pre">MS2760A.set_MaxPeak()</span></code></a></li>
+<li><a class="reference internal" href="#MS2760A.MS2760A.set_NextPeak"><code class="docutils literal notranslate"><span class="pre">MS2760A.set_NextPeak()</span></code></a></li>
+<li><a class="reference internal" href="#MS2760A.MS2760A.set_ResBwidth"><code class="docutils literal notranslate"><span class="pre">MS2760A.set_ResBwidth()</span></code></a></li>
+<li><a class="reference internal" href="#MS2760A.MS2760A.set_ResBwidthAuto"><code class="docutils literal notranslate"><span class="pre">MS2760A.set_ResBwidthAuto()</span></code></a></li>
+<li><a class="reference internal" href="#MS2760A.MS2760A.set_TraceSelected"><code class="docutils literal notranslate"><span class="pre">MS2760A.set_TraceSelected()</span></code></a></li>
+<li><a class="reference internal" href="#MS2760A.MS2760A.set_TraceState"><code class="docutils literal notranslate"><span class="pre">MS2760A.set_TraceState()</span></code></a></li>
+<li><a class="reference internal" href="#MS2760A.MS2760A.set_TraceType"><code class="docutils literal notranslate"><span class="pre">MS2760A.set_TraceType()</span></code></a></li>
+<li><a class="reference internal" href="#MS2760A.MS2760A.set_freq_Start"><code class="docutils literal notranslate"><span class="pre">MS2760A.set_freq_Start()</span></code></a></li>
+<li><a class="reference internal" href="#MS2760A.MS2760A.set_freq_Stop"><code class="docutils literal notranslate"><span class="pre">MS2760A.set_freq_Stop()</span></code></a></li>
+<li><a class="reference internal" href="#MS2760A.MS2760A.write"><code class="docutils literal notranslate"><span class="pre">MS2760A.write()</span></code></a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="LU1000.html">LU1000 module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="KEITHLEY2612.html">KEITHLEY2612 module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="APPH.html">APPH module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CoBrite.html">CoBrite module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="GPP4323.html">GPP4323 module</a></li>
 </ul>
-
+</div>
         </div>
       </div>
     </nav>
@@ -121,7 +109,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">MS2760A module</li>
+      <li class="breadcrumb-item active">Anritsu Vectro Analyzer MS2760A module</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/rst/MS2760A.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -131,9 +119,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="module-MS2760A">
-<span id="ms2760a-module"></span><h1>MS2760A module<a class="headerlink" href="#module-MS2760A" title="Link to this heading"></a></h1>
-<p>Created on Wed Dec  1 13:11:32 2021</p>
+  <section id="anritsu-vectro-analyzer-ms2760a-module">
+<h1>Anritsu Vectro Analyzer MS2760A module<a class="headerlink" href="#anritsu-vectro-analyzer-ms2760a-module" title="Link to this heading"></a></h1>
+<p id="module-MS2760A">Created on Wed Dec  1 13:11:32 2021</p>
 <p>&#64;author: Martin.Mihaylov</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="MS2760A.MS2760A">
@@ -894,10 +882,7 @@ Span.</p></li>
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="MS4647B.html" class="btn btn-neutral float-left" title="MS4647B module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="LU1000.html" class="btn btn-neutral float-right" title="LU1000 module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+          <footer>
 
   <hr/>
 

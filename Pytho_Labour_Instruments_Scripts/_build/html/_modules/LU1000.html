@@ -41,21 +41,8 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../rst/MG3694C.html">MG3694C module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/AQ6370D.html">AQ6370D module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/KA3005.html">KA3005 module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/PM100D.html">PM100D module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/MS4647B.html">MS4647B module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/MS2760A.html">MS2760A module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/LU1000.html">LU1000 module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/KEITHLEY2612.html">KEITHLEY2612 module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/APPH.html">APPH module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/CoBrite.html">CoBrite module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/GPP4323.html">GPP4323 module</a></li>
-</ul>
-
+              <!-- Local TOC -->
+              <div class="local-toc"></div>
         </div>
       </div>
     </nav>
@@ -119,10 +106,12 @@
 <span class="s1">          2) - Select OCT6 directory</span>
 <span class="s1">    </span>
 <span class="s1">          &#39;&#39;&#39;</span><span class="p">)</span>
+
     <span class="c1">#Path COM</span>
     <span class="n">root</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Tk</span><span class="p">()</span>
     <span class="n">COM</span> <span class="o">=</span> <span class="n">filedialog</span><span class="o">.</span><span class="n">askdirectory</span><span class="p">(</span><span class="n">parent</span> <span class="o">=</span> <span class="n">root</span><span class="p">,</span><span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;Select COM Diretory: &#39;</span><span class="p">)</span>
     <span class="n">root</span><span class="o">.</span><span class="n">destroy</span><span class="p">()</span>
+    <span class="c1">#COM = &#39;C:/Users/marti/OneDrive/Desktop/WHK Martin/Auto_Measurement/InstrumentControl/COM&#39;</span>
     
     
     
@@ -130,6 +119,7 @@
     <span class="n">root</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Tk</span><span class="p">()</span>
     <span class="n">OCT6</span> <span class="o">=</span> <span class="n">filedialog</span><span class="o">.</span><span class="n">askdirectory</span><span class="p">(</span><span class="n">parent</span> <span class="o">=</span> <span class="n">root</span><span class="p">,</span><span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;Select COM Diretory: &#39;</span><span class="p">)</span>
     <span class="n">root</span><span class="o">.</span><span class="n">destroy</span><span class="p">()</span>
+    <span class="c1">#OCT6 = &#39;C:/Users/marti/OneDrive/Desktop/WHK Martin/Auto_Measurement/InstrumentControl/OCT6&#39;</span>
     
     <span class="k">return</span> <span class="n">COM</span><span class="p">,</span> <span class="n">OCT6</span></div>
 

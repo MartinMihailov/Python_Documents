@@ -1,4 +1,4 @@
-MS2760A module
+Anritsu Vectro Analyzer MS2760A module
 ==============
 
 .. automodule:: MS2760A

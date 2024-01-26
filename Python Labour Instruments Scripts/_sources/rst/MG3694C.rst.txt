@@ -1,0 +1,7 @@
+MG3694C module
+==============
+
+.. automodule:: MG3694C
+   :members:
+   :undoc-members:
+   :show-inheritance:

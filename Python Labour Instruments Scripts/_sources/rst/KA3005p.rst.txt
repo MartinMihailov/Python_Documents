@@ -1,0 +1,7 @@
+KA3005p module
+==============
+
+.. automodule:: KA3005p
+   :members:
+   :undoc-members:
+   :show-inheritance:

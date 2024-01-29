@@ -1,8 +1,9 @@
 # Python Documents GDS Script
 
 This Python document is intended for use by the HNI SCT Group. 
-The documentation is for the lab instruments and can be 
-be found at: (https://martinmiroslavovmihaylov.github.io/Python_Documents/)
+The documentation is for the python wrap around for the nazca python Lib.
+HTML File with more information about the functions can be found in the 
+docs folder under index.html
 
 
 # How to clone just a single branch 

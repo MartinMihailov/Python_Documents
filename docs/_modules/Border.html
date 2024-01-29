@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Border &mdash; Python GDS with Nazca 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=f2a433a1"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Python GDS with Nazca
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"></div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Python GDS with Nazca</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Module code</a></li>
+      <li class="breadcrumb-item active">Border</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for Border</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">nazca</span> <span class="k">as</span> <span class="nn">nd</span>
+<span class="kn">from</span> <span class="nn">LayerDeff</span> <span class="kn">import</span> <span class="o">*</span>
+
+
+
+
+<div class="viewcode-block" id="Border">
+<a class="viewcode-back" href="../rst/Border.html#Border.Border">[docs]</a>
+<span class="k">class</span> <span class="nc">Border</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Set and Chip Frame to the GDSII File</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">cell_name</span> <span class="o">=</span> <span class="s2">&quot;Border&quot;</span>
+    <span class="n">text_offset_x</span> <span class="o">=</span> <span class="mi">150</span>
+    <span class="n">text_offset_y</span> <span class="o">=</span> <span class="mi">30</span>
+
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">chip_size_x</span><span class="p">,</span> <span class="n">chip_size_y</span><span class="p">,</span> <span class="n">layer_deep_grid</span><span class="o">=</span><span class="n">Layer</span><span class="o">.</span><span class="n">DEEP_GRID</span><span class="p">,</span> <span class="n">text_layer</span><span class="o">=</span><span class="n">Layer</span><span class="o">.</span><span class="n">TXT_DEEP_GRID</span><span class="p">,</span> <span class="n">layer_payload</span><span class="o">=</span><span class="n">Layer</span><span class="o">.</span><span class="n">PAYLOAD</span><span class="p">,</span> <span class="n">text_bottom</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">text_top</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span> <span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        </span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        chip_size_x : int/float</span>
+<span class="sd">            Width of the Chip.</span>
+<span class="sd">        chip_size_y : int/float</span>
+<span class="sd">            Length of the Chip.</span>
+<span class="sd">        layer_deep_grid : list, optional</span>
+<span class="sd">            Layers Definition, do not change! The default is Layer.DEEP_GRID.</span>
+<span class="sd">        text_layer :  list, optional</span>
+<span class="sd">            Layers Definition, do not change! The default is Layer.TXT_Struct.</span>
+<span class="sd">        layer_payload : list, optional</span>
+<span class="sd">            Layers Definition, do not change! The default is Layer.PAYLOAD.</span>
+<span class="sd">        text_bottom : str, optional</span>
+<span class="sd">            An Text that appears under the chip main Frame. The default is &quot;&quot;.</span>
+<span class="sd">        text_top : str, optional</span>
+<span class="sd">            An Text that appears over the chip main Frame. The default is &quot;&quot;.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        None.</span>
+
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">chip_size_x</span> <span class="o">=</span> <span class="n">chip_size_x</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">chip_size_y</span> <span class="o">=</span> <span class="n">chip_size_y</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">layer_deep_grid</span> <span class="o">=</span> <span class="n">layer_deep_grid</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">text_bottom</span> <span class="o">=</span> <span class="n">text_bottom</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">text_top</span> <span class="o">=</span> <span class="n">text_top</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">text_layer</span> <span class="o">=</span> <span class="n">text_layer</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">layer_payload</span> <span class="o">=</span> <span class="n">layer_payload</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">extra_size</span> <span class="o">=</span> <span class="mi">150</span>
+
+
+        <span class="c1"># calculate parameter</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">border_x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">chip_size_x</span> <span class="o">/</span> <span class="mi">2</span> 
+        <span class="bp">self</span><span class="o">.</span><span class="n">border_y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">chip_size_y</span> <span class="o">/</span> <span class="mi">2</span> 
+        <span class="bp">self</span><span class="o">.</span><span class="n">full_size_x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">extra_size</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">border_x</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">full_size_y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">extra_size</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">border_y</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_cell</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_gds</span><span class="p">()</span>
+
+<div class="viewcode-block" id="Border.create_gds">
+<a class="viewcode-back" href="../rst/Border.html#Border.Border.create_gds">[docs]</a>
+    <span class="k">def</span> <span class="nf">create_gds</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        </span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        cell : cell nezca object</span>
+<span class="sd">            Return cell object for the nezca library.</span>
+
+<span class="sd">        &#39;&#39;&#39;</span>
+        
+        <span class="k">with</span> <span class="n">nd</span><span class="o">.</span><span class="n">Cell</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">Border</span><span class="o">.</span><span class="n">cell_name</span><span class="p">)</span> <span class="k">as</span> <span class="n">cell</span><span class="p">:</span>
+            
+
+            <span class="c1"># add the boundary</span>
+            <span class="n">square_Chip</span> <span class="o">=</span> <span class="p">[(</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">border_x</span><span class="p">,</span>  <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">border_x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">border_y</span><span class="p">),</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">border_x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">border_y</span><span class="p">),</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">border_x</span><span class="p">,</span> <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">border_y</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">border_x</span><span class="p">,</span> <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">border_y</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">border_x</span><span class="p">,</span> <span class="mi">0</span><span class="p">)]</span>
+            <span class="n">square_Edge_T</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">0</span><span class="p">,</span>  <span class="bp">self</span><span class="o">.</span><span class="n">full_size_y</span><span class="p">),</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">full_size_x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">full_size_y</span><span class="p">),</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">full_size_x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">border_y</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">full_size_x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">border_y</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">full_size_x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">full_size_y</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">full_size_y</span><span class="p">)]</span>
+            <span class="n">square_Edge_B</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">0</span><span class="p">,</span>  <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">full_size_y</span><span class="p">),</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">full_size_x</span><span class="p">,</span> <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">full_size_y</span><span class="p">),</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">full_size_x</span><span class="p">,</span> <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">border_y</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">full_size_x</span><span class="p">,</span> <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">border_y</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">full_size_x</span><span class="p">,</span> <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">full_size_y</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">full_size_y</span><span class="p">)]</span>
+            <span class="n">square_Edge_L</span> <span class="o">=</span> <span class="p">[(</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">full_size_x</span><span class="p">,</span>  <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">full_size_x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">full_size_y</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">border_x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">full_size_y</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">border_x</span><span class="p">,</span> <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">full_size_y</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">full_size_x</span><span class="p">,</span> <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">full_size_y</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">full_size_x</span><span class="p">,</span> <span class="mi">0</span><span class="p">)]</span>
+            <span class="n">square_Edge_R</span> <span class="o">=</span> <span class="p">[(</span><span class="bp">self</span><span class="o">.</span><span class="n">full_size_x</span><span class="p">,</span>  <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">full_size_x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">full_size_y</span><span class="p">),</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">border_x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">full_size_y</span><span class="p">),</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">border_x</span><span class="p">,</span> <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">full_size_y</span><span class="p">),</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">full_size_x</span><span class="p">,</span> <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">full_size_y</span><span class="p">),</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">full_size_x</span><span class="p">,</span> <span class="mi">0</span><span class="p">)]</span>
+            
+
+            <span class="c1"># add Polygons</span>
+            <span class="n">nd</span><span class="o">.</span><span class="n">Polygon</span><span class="p">(</span><span class="n">points</span><span class="o">=</span><span class="n">square_Chip</span> <span class="p">,</span> <span class="n">layer</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">layer_payload</span><span class="p">)</span><span class="o">.</span><span class="n">put</span><span class="p">()</span>
+            <span class="n">nd</span><span class="o">.</span><span class="n">Polygon</span><span class="p">(</span><span class="n">points</span><span class="o">=</span><span class="n">square_Edge_T</span> <span class="p">,</span> <span class="n">layer</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">layer_deep_grid</span><span class="p">)</span><span class="o">.</span><span class="n">put</span><span class="p">()</span>
+            <span class="n">nd</span><span class="o">.</span><span class="n">Polygon</span><span class="p">(</span><span class="n">points</span><span class="o">=</span><span class="n">square_Edge_B</span> <span class="p">,</span> <span class="n">layer</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">layer_deep_grid</span><span class="p">)</span><span class="o">.</span><span class="n">put</span><span class="p">()</span>
+            <span class="n">nd</span><span class="o">.</span><span class="n">Polygon</span><span class="p">(</span><span class="n">points</span><span class="o">=</span><span class="n">square_Edge_L</span> <span class="p">,</span> <span class="n">layer</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">layer_deep_grid</span><span class="p">)</span><span class="o">.</span><span class="n">put</span><span class="p">()</span>
+            <span class="n">nd</span><span class="o">.</span><span class="n">Polygon</span><span class="p">(</span><span class="n">points</span><span class="o">=</span><span class="n">square_Edge_R</span> <span class="p">,</span> <span class="n">layer</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">layer_deep_grid</span><span class="p">)</span><span class="o">.</span><span class="n">put</span><span class="p">()</span>
+
+        
+            <span class="c1"># add the text</span>
+            <span class="n">text_height</span> <span class="o">=</span> <span class="mi">100</span>
+            <span class="n">nd</span><span class="o">.</span><span class="n">Font</span><span class="p">(</span><span class="s1">&#39;cousine&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">text_bottom</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="n">text_height</span><span class="p">,</span> <span class="n">align</span><span class="o">=</span><span class="s1">&#39;cb&#39;</span><span class="p">,</span> <span class="n">layer</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">text_layer</span><span class="p">)</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">full_size_y</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">text_offset_y</span><span class="p">)</span>
+            <span class="n">nd</span><span class="o">.</span><span class="n">Font</span><span class="p">(</span><span class="s1">&#39;cousine&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">text_top</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="n">text_height</span><span class="p">,</span> <span class="n">align</span><span class="o">=</span><span class="s1">&#39;ct&#39;</span><span class="p">,</span> <span class="n">layer</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">text_layer</span><span class="p">)</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">full_size_y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">text_offset_y</span><span class="p">)</span>
+
+
+        <span class="k">return</span> <span class="n">cell</span></div>
+
+
+<div class="viewcode-block" id="Border.put">
+<a class="viewcode-back" href="../rst/Border.html#Border.Border.put">[docs]</a>
+    <span class="k">def</span> <span class="nf">put</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        </span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        *args : TYPE</span>
+<span class="sd">            DESCRIPTION.</span>
+<span class="sd">        **kwargs : TYPE</span>
+<span class="sd">            DESCRIPTION.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        Cell to put on the nazca GDSII file</span>
+<span class="sd">            Do not chnage.</span>
+
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cell</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+</div>
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Martin Mihaylov.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

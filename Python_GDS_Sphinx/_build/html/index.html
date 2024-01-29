@@ -46,10 +46,136 @@
               <div class="local-toc"><ul>
 <li><a class="reference internal" href="#">Welcome to Python GDS with Nazca’s documentation!</a></li>
 <li><a class="reference internal" href="#how-to-use-the-script">How to use the script</a></li>
-<li><a class="reference internal" href="#nazcaconstructor-package">NazcaConstructor package</a><ul>
-<li><a class="reference internal" href="#submodules">Submodules</a></li>
-<li><a class="reference internal" href="#nazcaconstructor-nazca-constructor-module">NazcaConstructor.Nazca_Constructor module</a></li>
-<li><a class="reference internal" href="#module-contents">Module contents</a></li>
+<li><a class="reference internal" href="#chip-border-module">Chip Border module</a><ul>
+<li><a class="reference internal" href="#Border.Border"><code class="docutils literal notranslate"><span class="pre">Border</span></code></a><ul>
+<li><a class="reference internal" href="#Border.Border.cell_name"><code class="docutils literal notranslate"><span class="pre">Border.cell_name</span></code></a></li>
+<li><a class="reference internal" href="#Border.Border.create_gds"><code class="docutils literal notranslate"><span class="pre">Border.create_gds()</span></code></a></li>
+<li><a class="reference internal" href="#Border.Border.put"><code class="docutils literal notranslate"><span class="pre">Border.put()</span></code></a></li>
+<li><a class="reference internal" href="#Border.Border.text_offset_x"><code class="docutils literal notranslate"><span class="pre">Border.text_offset_x</span></code></a></li>
+<li><a class="reference internal" href="#Border.Border.text_offset_y"><code class="docutils literal notranslate"><span class="pre">Border.text_offset_y</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#optical-couplers-1x2-multi-mode-interferometer-directional-coupler-y-junction-module">Optical Couplers (1x2 Multi mode interferometer, Directional Coupler, Y-Junction) module</a><ul>
+<li><a class="reference internal" href="#Coupler.DirectionalCoupler"><code class="docutils literal notranslate"><span class="pre">DirectionalCoupler</span></code></a><ul>
+<li><a class="reference internal" href="#Coupler.DirectionalCoupler.cell_name"><code class="docutils literal notranslate"><span class="pre">DirectionalCoupler.cell_name</span></code></a></li>
+<li><a class="reference internal" href="#Coupler.DirectionalCoupler.create_gds"><code class="docutils literal notranslate"><span class="pre">DirectionalCoupler.create_gds()</span></code></a></li>
+<li><a class="reference internal" href="#Coupler.DirectionalCoupler.put"><code class="docutils literal notranslate"><span class="pre">DirectionalCoupler.put()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Coupler.MMI1x2"><code class="docutils literal notranslate"><span class="pre">MMI1x2</span></code></a><ul>
+<li><a class="reference internal" href="#Coupler.MMI1x2.cell_name"><code class="docutils literal notranslate"><span class="pre">MMI1x2.cell_name</span></code></a></li>
+<li><a class="reference internal" href="#Coupler.MMI1x2.create_gds"><code class="docutils literal notranslate"><span class="pre">MMI1x2.create_gds()</span></code></a></li>
+<li><a class="reference internal" href="#Coupler.MMI1x2.put"><code class="docutils literal notranslate"><span class="pre">MMI1x2.put()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Coupler.YJunction"><code class="docutils literal notranslate"><span class="pre">YJunction</span></code></a><ul>
+<li><a class="reference internal" href="#Coupler.YJunction.cell_name"><code class="docutils literal notranslate"><span class="pre">YJunction.cell_name</span></code></a></li>
+<li><a class="reference internal" href="#Coupler.YJunction.create_gds"><code class="docutils literal notranslate"><span class="pre">YJunction.create_gds()</span></code></a></li>
+<li><a class="reference internal" href="#Coupler.YJunction.number"><code class="docutils literal notranslate"><span class="pre">YJunction.number</span></code></a></li>
+<li><a class="reference internal" href="#Coupler.YJunction.put"><code class="docutils literal notranslate"><span class="pre">YJunction.put()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#modulators-mach-zehnder-modulator-module">Modulators (Mach-Zehnder-Modulator) module</a><ul>
+<li><a class="reference internal" href="#Modulators.MZM"><code class="docutils literal notranslate"><span class="pre">MZM</span></code></a><ul>
+<li><a class="reference internal" href="#Modulators.MZM.cell_MZM"><code class="docutils literal notranslate"><span class="pre">MZM.cell_MZM</span></code></a></li>
+<li><a class="reference internal" href="#Modulators.MZM.cell_WG"><code class="docutils literal notranslate"><span class="pre">MZM.cell_WG</span></code></a></li>
+<li><a class="reference internal" href="#Modulators.MZM.create_gds"><code class="docutils literal notranslate"><span class="pre">MZM.create_gds()</span></code></a></li>
+<li><a class="reference internal" href="#Modulators.MZM.put"><code class="docutils literal notranslate"><span class="pre">MZM.put()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#s-bends-cubic-bezier-function-bend-cosinus-function-bend-euler-function-bend-module">S Bends (Cubic Bezier Function Bend, Cosinus Function Bend, Euler Function Bend) module</a><ul>
+<li><a class="reference internal" href="#S_Bends.Euler2"><code class="docutils literal notranslate"><span class="pre">Euler2</span></code></a><ul>
+<li><a class="reference internal" href="#S_Bends.Euler2.cell_name"><code class="docutils literal notranslate"><span class="pre">Euler2.cell_name</span></code></a></li>
+<li><a class="reference internal" href="#S_Bends.Euler2.create_gds"><code class="docutils literal notranslate"><span class="pre">Euler2.create_gds()</span></code></a></li>
+<li><a class="reference internal" href="#S_Bends.Euler2.put"><code class="docutils literal notranslate"><span class="pre">Euler2.put()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#S_Bends.SBend_Euler"><code class="docutils literal notranslate"><span class="pre">SBend_Euler</span></code></a><ul>
+<li><a class="reference internal" href="#S_Bends.SBend_Euler.cell_name"><code class="docutils literal notranslate"><span class="pre">SBend_Euler.cell_name</span></code></a></li>
+<li><a class="reference internal" href="#S_Bends.SBend_Euler.cell_name_bend"><code class="docutils literal notranslate"><span class="pre">SBend_Euler.cell_name_bend</span></code></a></li>
+<li><a class="reference internal" href="#S_Bends.SBend_Euler.create_bend"><code class="docutils literal notranslate"><span class="pre">SBend_Euler.create_bend()</span></code></a></li>
+<li><a class="reference internal" href="#S_Bends.SBend_Euler.create_gds"><code class="docutils literal notranslate"><span class="pre">SBend_Euler.create_gds()</span></code></a></li>
+<li><a class="reference internal" href="#S_Bends.SBend_Euler.put"><code class="docutils literal notranslate"><span class="pre">SBend_Euler.put()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#S_Bends.SBends_Bezier"><code class="docutils literal notranslate"><span class="pre">SBends_Bezier</span></code></a><ul>
+<li><a class="reference internal" href="#S_Bends.SBends_Bezier.cell_name"><code class="docutils literal notranslate"><span class="pre">SBends_Bezier.cell_name</span></code></a></li>
+<li><a class="reference internal" href="#S_Bends.SBends_Bezier.create_gds"><code class="docutils literal notranslate"><span class="pre">SBends_Bezier.create_gds()</span></code></a></li>
+<li><a class="reference internal" href="#S_Bends.SBends_Bezier.put"><code class="docutils literal notranslate"><span class="pre">SBends_Bezier.put()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#S_Bends.SBends_Cos"><code class="docutils literal notranslate"><span class="pre">SBends_Cos</span></code></a><ul>
+<li><a class="reference internal" href="#S_Bends.SBends_Cos.cell_name"><code class="docutils literal notranslate"><span class="pre">SBends_Cos.cell_name</span></code></a></li>
+<li><a class="reference internal" href="#S_Bends.SBends_Cos.create_gds"><code class="docutils literal notranslate"><span class="pre">SBends_Cos.create_gds()</span></code></a></li>
+<li><a class="reference internal" href="#S_Bends.SBends_Cos.put"><code class="docutils literal notranslate"><span class="pre">SBends_Cos.put()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#S_Bends.end_radius_from_angle"><code class="docutils literal notranslate"><span class="pre">end_radius_from_angle()</span></code></a></li>
+<li><a class="reference internal" href="#S_Bends.move_matrix"><code class="docutils literal notranslate"><span class="pre">move_matrix()</span></code></a></li>
+<li><a class="reference internal" href="#S_Bends.radius_from_angle"><code class="docutils literal notranslate"><span class="pre">radius_from_angle()</span></code></a></li>
+<li><a class="reference internal" href="#S_Bends.radius_from_spacing"><code class="docutils literal notranslate"><span class="pre">radius_from_spacing()</span></code></a></li>
+<li><a class="reference internal" href="#S_Bends.rotate_matrix"><code class="docutils literal notranslate"><span class="pre">rotate_matrix()</span></code></a></li>
+<li><a class="reference internal" href="#S_Bends.xya_sbend_euler"><code class="docutils literal notranslate"><span class="pre">xya_sbend_euler()</span></code></a></li>
+<li><a class="reference internal" href="#S_Bends.xyal_bend_euler"><code class="docutils literal notranslate"><span class="pre">xyal_bend_euler()</span></code></a></li>
+<li><a class="reference internal" href="#S_Bends.xyal_euler2"><code class="docutils literal notranslate"><span class="pre">xyal_euler2()</span></code></a></li>
+<li><a class="reference internal" href="#S_Bends.xyl_euler"><code class="docutils literal notranslate"><span class="pre">xyl_euler()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#waveguides-types-straight-waveguides-point-to-point-wavveguides-module">Waveguides Types (Straight Waveguides, Point to Point Wavveguides) module</a><ul>
+<li><a class="reference internal" href="#Waveguides.StrWG"><code class="docutils literal notranslate"><span class="pre">StrWG</span></code></a><ul>
+<li><a class="reference internal" href="#Waveguides.StrWG.cell_name"><code class="docutils literal notranslate"><span class="pre">StrWG.cell_name</span></code></a></li>
+<li><a class="reference internal" href="#Waveguides.StrWG.create_gds"><code class="docutils literal notranslate"><span class="pre">StrWG.create_gds()</span></code></a></li>
+<li><a class="reference internal" href="#Waveguides.StrWG.put"><code class="docutils literal notranslate"><span class="pre">StrWG.put()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Waveguides.StrWG_P2P"><code class="docutils literal notranslate"><span class="pre">StrWG_P2P</span></code></a><ul>
+<li><a class="reference internal" href="#Waveguides.StrWG_P2P.cell_name"><code class="docutils literal notranslate"><span class="pre">StrWG_P2P.cell_name</span></code></a></li>
+<li><a class="reference internal" href="#Waveguides.StrWG_P2P.create_gds_pin_to_pin"><code class="docutils literal notranslate"><span class="pre">StrWG_P2P.create_gds_pin_to_pin()</span></code></a></li>
+<li><a class="reference internal" href="#Waveguides.StrWG_P2P.put"><code class="docutils literal notranslate"><span class="pre">StrWG_P2P.put()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#layer-deffinitions-module">Layer Deffinitions module</a><ul>
+<li><a class="reference internal" href="#LayerDeff.Layer"><code class="docutils literal notranslate"><span class="pre">Layer</span></code></a><ul>
+<li><a class="reference internal" href="#LayerDeff.Layer.ARROW_CLR"><code class="docutils literal notranslate"><span class="pre">Layer.ARROW_CLR</span></code></a></li>
+<li><a class="reference internal" href="#LayerDeff.Layer.CLD_OPEN"><code class="docutils literal notranslate"><span class="pre">Layer.CLD_OPEN</span></code></a></li>
+<li><a class="reference internal" href="#LayerDeff.Layer.DEEP_GRID"><code class="docutils literal notranslate"><span class="pre">Layer.DEEP_GRID</span></code></a></li>
+<li><a class="reference internal" href="#LayerDeff.Layer.MET1"><code class="docutils literal notranslate"><span class="pre">Layer.MET1</span></code></a></li>
+<li><a class="reference internal" href="#LayerDeff.Layer.MET2"><code class="docutils literal notranslate"><span class="pre">Layer.MET2</span></code></a></li>
+<li><a class="reference internal" href="#LayerDeff.Layer.PAYLOAD"><code class="docutils literal notranslate"><span class="pre">Layer.PAYLOAD</span></code></a></li>
+<li><a class="reference internal" href="#LayerDeff.Layer.Struct"><code class="docutils literal notranslate"><span class="pre">Layer.Struct</span></code></a></li>
+<li><a class="reference internal" href="#LayerDeff.Layer.TXT_DEEP_GRID"><code class="docutils literal notranslate"><span class="pre">Layer.TXT_DEEP_GRID</span></code></a></li>
+<li><a class="reference internal" href="#LayerDeff.Layer.TXT_MET1"><code class="docutils literal notranslate"><span class="pre">Layer.TXT_MET1</span></code></a></li>
+<li><a class="reference internal" href="#LayerDeff.Layer.TXT_MET2"><code class="docutils literal notranslate"><span class="pre">Layer.TXT_MET2</span></code></a></li>
+<li><a class="reference internal" href="#LayerDeff.Layer.TXT_Ports"><code class="docutils literal notranslate"><span class="pre">Layer.TXT_Ports</span></code></a></li>
+<li><a class="reference internal" href="#LayerDeff.Layer.TXT_Struct"><code class="docutils literal notranslate"><span class="pre">Layer.TXT_Struct</span></code></a></li>
+<li><a class="reference internal" href="#LayerDeff.Layer.TXT_VIA"><code class="docutils literal notranslate"><span class="pre">Layer.TXT_VIA</span></code></a></li>
+<li><a class="reference internal" href="#LayerDeff.Layer.VIA"><code class="docutils literal notranslate"><span class="pre">Layer.VIA</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#LayerDeff.XS"><code class="docutils literal notranslate"><span class="pre">XS</span></code></a><ul>
+<li><a class="reference internal" href="#LayerDeff.XS.ARROW_CLR"><code class="docutils literal notranslate"><span class="pre">XS.ARROW_CLR</span></code></a></li>
+<li><a class="reference internal" href="#LayerDeff.XS.CLD_OPEN"><code class="docutils literal notranslate"><span class="pre">XS.CLD_OPEN</span></code></a></li>
+<li><a class="reference internal" href="#LayerDeff.XS.DEEP_GRID"><code class="docutils literal notranslate"><span class="pre">XS.DEEP_GRID</span></code></a></li>
+<li><a class="reference internal" href="#LayerDeff.XS.MET1"><code class="docutils literal notranslate"><span class="pre">XS.MET1</span></code></a></li>
+<li><a class="reference internal" href="#LayerDeff.XS.MET2"><code class="docutils literal notranslate"><span class="pre">XS.MET2</span></code></a></li>
+<li><a class="reference internal" href="#LayerDeff.XS.Struct"><code class="docutils literal notranslate"><span class="pre">XS.Struct</span></code></a></li>
+<li><a class="reference internal" href="#LayerDeff.XS.TXT_DEEP_GRID"><code class="docutils literal notranslate"><span class="pre">XS.TXT_DEEP_GRID</span></code></a></li>
+<li><a class="reference internal" href="#LayerDeff.XS.TXT_MET1"><code class="docutils literal notranslate"><span class="pre">XS.TXT_MET1</span></code></a></li>
+<li><a class="reference internal" href="#LayerDeff.XS.TXT_MET2"><code class="docutils literal notranslate"><span class="pre">XS.TXT_MET2</span></code></a></li>
+<li><a class="reference internal" href="#LayerDeff.XS.TXT_Ports"><code class="docutils literal notranslate"><span class="pre">XS.TXT_Ports</span></code></a></li>
+<li><a class="reference internal" href="#LayerDeff.XS.TXT_Struct"><code class="docutils literal notranslate"><span class="pre">XS.TXT_Struct</span></code></a></li>
+<li><a class="reference internal" href="#LayerDeff.XS.TXT_VIA"><code class="docutils literal notranslate"><span class="pre">XS.TXT_VIA</span></code></a></li>
+<li><a class="reference internal" href="#LayerDeff.XS.VIA"><code class="docutils literal notranslate"><span class="pre">XS.VIA</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
@@ -91,17 +217,744 @@ is just an raparound the nazca lib.</p>
 GDS sctructures are made. And in the secound path there is an for loop Example that will generate
 an GDSII file with all the objects available in the library.</p>
 </section>
-<section id="nazcaconstructor-package">
-<h1>NazcaConstructor package<a class="headerlink" href="#nazcaconstructor-package" title="Link to this heading"></a></h1>
-<section id="submodules">
-<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+<section id="chip-border-module">
+<h1>Chip Border module<a class="headerlink" href="#chip-border-module" title="Link to this heading"></a></h1>
+<dl class="py class" id="module-Border">
+<dt class="sig sig-object py" id="Border.Border">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Border.</span></span><span class="sig-name descname"><span class="pre">Border</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">chip_size_x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chip_size_y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer_deep_grid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'DEEP_GRID'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text_layer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'TXT_DEEP_GRID'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer_payload</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'PAYLOAD'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text_bottom</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text_top</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Border.html#Border"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Border.Border" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Set and Chip Frame to the GDSII File</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Border.Border.cell_name">
+<span class="sig-name descname"><span class="pre">cell_name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Border'</span></em><a class="headerlink" href="#Border.Border.cell_name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Border.Border.create_gds">
+<span class="sig-name descname"><span class="pre">create_gds</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Border.html#Border.create_gds"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Border.Border.create_gds" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>cell</strong> – Return cell object for the nezca library.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>cell nezca object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Border.Border.put">
+<span class="sig-name descname"><span class="pre">put</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Border.html#Border.put"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Border.Border.put" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>*args</strong> (<em>TYPE</em>) – DESCRIPTION.</p></li>
+<li><p><strong>**kwargs</strong> (<em>TYPE</em>) – DESCRIPTION.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Do not chnage.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Cell to put on the nazca GDSII file</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Border.Border.text_offset_x">
+<span class="sig-name descname"><span class="pre">text_offset_x</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">150</span></em><a class="headerlink" href="#Border.Border.text_offset_x" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Border.Border.text_offset_y">
+<span class="sig-name descname"><span class="pre">text_offset_y</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">30</span></em><a class="headerlink" href="#Border.Border.text_offset_y" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </section>
-<section id="nazcaconstructor-nazca-constructor-module">
-<h2>NazcaConstructor.Nazca_Constructor module<a class="headerlink" href="#nazcaconstructor-nazca-constructor-module" title="Link to this heading"></a></h2>
+<section id="optical-couplers-1x2-multi-mode-interferometer-directional-coupler-y-junction-module">
+<h1>Optical Couplers (1x2 Multi mode interferometer, Directional Coupler, Y-Junction) module<a class="headerlink" href="#optical-couplers-1x2-multi-mode-interferometer-directional-coupler-y-junction-module" title="Link to this heading"></a></h1>
+<dl class="py class" id="module-Coupler">
+<dt class="sig sig-object py" id="Coupler.DirectionalCoupler">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Coupler.</span></span><span class="sig-name descname"><span class="pre">DirectionalCoupler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">length_DC</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width_WG</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gap</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer_Struct</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Struct'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer_text_Pots</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'TXT_Ports'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer_Arrow</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ARROW_CLR'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spacing</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lenght_bend</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pins</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Coupler.html#DirectionalCoupler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Coupler.DirectionalCoupler" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Directional Coupler</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Coupler.DirectionalCoupler.cell_name">
+<span class="sig-name descname"><span class="pre">cell_name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'DirectionalCoupler'</span></em><a class="headerlink" href="#Coupler.DirectionalCoupler.cell_name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Coupler.DirectionalCoupler.create_gds">
+<span class="sig-name descname"><span class="pre">create_gds</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Coupler.html#DirectionalCoupler.create_gds"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Coupler.DirectionalCoupler.create_gds" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>cell</strong> – Return cell object for the nezca library.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>cell nezca object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Coupler.DirectionalCoupler.put">
+<span class="sig-name descname"><span class="pre">put</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Coupler.html#DirectionalCoupler.put"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Coupler.DirectionalCoupler.put" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>*args</strong> (<em>TYPE</em>) – DESCRIPTION.</p></li>
+<li><p><strong>**kwargs</strong> (<em>TYPE</em>) – DESCRIPTION.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Do not chnage.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Cell to put on the nazca GDSII file</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="Coupler.MMI1x2">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Coupler.</span></span><span class="sig-name descname"><span class="pre">MMI1x2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">width_MMI</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">length_MMI</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width_WG</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">length_WG</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gap</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer_Struct</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Struct'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer_text_Pots</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'TXT_Ports'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer_Arrow</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ARROW_CLR'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spacing</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lenght_bend</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pins</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Coupler.html#MMI1x2"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Coupler.MMI1x2" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>1x2 MMI GDS Class</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Coupler.MMI1x2.cell_name">
+<span class="sig-name descname"><span class="pre">cell_name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MMI1x2'</span></em><a class="headerlink" href="#Coupler.MMI1x2.cell_name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Coupler.MMI1x2.create_gds">
+<span class="sig-name descname"><span class="pre">create_gds</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Coupler.html#MMI1x2.create_gds"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Coupler.MMI1x2.create_gds" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>cell</strong> – Return cell object for the nezca library.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>cell nezca object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Coupler.MMI1x2.put">
+<span class="sig-name descname"><span class="pre">put</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Coupler.html#MMI1x2.put"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Coupler.MMI1x2.put" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>*args</strong> (<em>TYPE</em>) – DESCRIPTION.</p></li>
+<li><p><strong>**kwargs</strong> (<em>TYPE</em>) – DESCRIPTION.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Do not chnage.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Cell to put on the nazca GDSII file</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="Coupler.YJunction">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Coupler.</span></span><span class="sig-name descname"><span class="pre">YJunction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">width_WG</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gap</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer_Struct</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Struct'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer_text_Pots</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'TXT_Ports'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer_Arrow</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ARROW_CLR'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spacing</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Bend_Length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reverse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Coupler.html#YJunction"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Coupler.YJunction" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Y-Junction</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Coupler.YJunction.cell_name">
+<span class="sig-name descname"><span class="pre">cell_name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'YJunction'</span></em><a class="headerlink" href="#Coupler.YJunction.cell_name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Coupler.YJunction.create_gds">
+<span class="sig-name descname"><span class="pre">create_gds</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Coupler.html#YJunction.create_gds"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Coupler.YJunction.create_gds" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>cell</strong> – Return cell object for the nezca library.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>cell nezca object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Coupler.YJunction.number">
+<span class="sig-name descname"><span class="pre">number</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#Coupler.YJunction.number" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Coupler.YJunction.put">
+<span class="sig-name descname"><span class="pre">put</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Coupler.html#YJunction.put"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Coupler.YJunction.put" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>*args</strong> (<em>TYPE</em>) – DESCRIPTION.</p></li>
+<li><p><strong>**kwargs</strong> (<em>TYPE</em>) – DESCRIPTION.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Do not chnage.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Cell to put on the nazca GDSII file</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </section>
-<section id="module-contents">
-<h2>Module contents<a class="headerlink" href="#module-contents" title="Link to this heading"></a></h2>
+<section id="modulators-mach-zehnder-modulator-module">
+<h1>Modulators (Mach-Zehnder-Modulator) module<a class="headerlink" href="#modulators-mach-zehnder-modulator-module" title="Link to this heading"></a></h1>
+<dl class="py class" id="module-Modulators">
+<dt class="sig sig-object py" id="Modulators.MZM">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Modulators.</span></span><span class="sig-name descname"><span class="pre">MZM</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">width_Metal</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">length_Metal</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width_WG</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">length_WG</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width_MMI</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">length_MMI</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">length_WG_MMI</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">space</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gap_MMI_WG</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gap</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer_Struct</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Struct'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer_text_Struct</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'TXT_Struct'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer_Metal</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'MET1'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer_text_Metal</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'TXT_MET1'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer_text_Pots</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'TXT_Ports'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer_Arrow</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ARROW_CLR'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text_MZM</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text_WG</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text_MMI</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Modulators.html#MZM"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Modulators.MZM" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Mach Zehnder Modulator</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Modulators.MZM.cell_MZM">
+<span class="sig-name descname"><span class="pre">cell_MZM</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MZM'</span></em><a class="headerlink" href="#Modulators.MZM.cell_MZM" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Modulators.MZM.cell_WG">
+<span class="sig-name descname"><span class="pre">cell_WG</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'WG'</span></em><a class="headerlink" href="#Modulators.MZM.cell_WG" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Modulators.MZM.create_gds">
+<span class="sig-name descname"><span class="pre">create_gds</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Modulators.html#MZM.create_gds"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Modulators.MZM.create_gds" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>cell</strong> – Return cell object for the nezca library.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>cell nezca object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Modulators.MZM.put">
+<span class="sig-name descname"><span class="pre">put</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Modulators.html#MZM.put"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Modulators.MZM.put" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>*args</strong> (<em>TYPE</em>) – DESCRIPTION.</p></li>
+<li><p><strong>**kwargs</strong> (<em>TYPE</em>) – DESCRIPTION.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Do not chnage.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Cell to put on the nazca GDSII file</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </section>
+<section id="s-bends-cubic-bezier-function-bend-cosinus-function-bend-euler-function-bend-module">
+<h1>S Bends (Cubic Bezier Function Bend, Cosinus Function Bend, Euler Function Bend) module<a class="headerlink" href="#s-bends-cubic-bezier-function-bend-cosinus-function-bend-euler-function-bend-module" title="Link to this heading"></a></h1>
+<dl class="py class" id="module-S_Bends">
+<dt class="sig sig-object py" id="S_Bends.Euler2">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">S_Bends.</span></span><span class="sig-name descname"><span class="pre">Euler2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">waveguide_width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">90</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">50</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer_Struct</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Struct'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer_text_Pots</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'TXT_Ports'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer_Arrow</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ARROW_CLR'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/S_Bends.html#Euler2"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#S_Bends.Euler2" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Euler curve (Function is tooken from CSEM)</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="S_Bends.Euler2.cell_name">
+<span class="sig-name descname"><span class="pre">cell_name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Euler2'</span></em><a class="headerlink" href="#S_Bends.Euler2.cell_name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="S_Bends.Euler2.create_gds">
+<span class="sig-name descname"><span class="pre">create_gds</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/S_Bends.html#Euler2.create_gds"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#S_Bends.Euler2.create_gds" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>cell</strong> – Return cell object for the nezca library.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>cell nezca object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="S_Bends.Euler2.put">
+<span class="sig-name descname"><span class="pre">put</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/S_Bends.html#Euler2.put"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#S_Bends.Euler2.put" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>*args</strong> (<em>TYPE</em>) – DESCRIPTION.</p></li>
+<li><p><strong>**kwargs</strong> (<em>TYPE</em>) – DESCRIPTION.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Do not chnage.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Cell to put on the nazca GDSII file</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="S_Bends.SBend_Euler">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">S_Bends.</span></span><span class="sig-name descname"><span class="pre">SBend_Euler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">width_WG</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Bend_Length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">50</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reverse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer_Struct</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Struct'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer_text_Pots</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'TXT_Ports'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer_Arrow</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ARROW_CLR'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/S_Bends.html#SBend_Euler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#S_Bends.SBend_Euler" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Euler S-Bends tooken from (CSEM)</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="S_Bends.SBend_Euler.cell_name">
+<span class="sig-name descname"><span class="pre">cell_name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'SBendEuler'</span></em><a class="headerlink" href="#S_Bends.SBend_Euler.cell_name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="S_Bends.SBend_Euler.cell_name_bend">
+<span class="sig-name descname"><span class="pre">cell_name_bend</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'SBendEuler_bend'</span></em><a class="headerlink" href="#S_Bends.SBend_Euler.cell_name_bend" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="S_Bends.SBend_Euler.create_bend">
+<span class="sig-name descname"><span class="pre">create_bend</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">radius</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/S_Bends.html#SBend_Euler.create_bend"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#S_Bends.SBend_Euler.create_bend" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>radius</strong> (<em>int/float</em>) – Rdius of the Euler curve.</p></li>
+<li><p><strong>angle</strong> (<em>int/float</em>) – Angle of the euler bend.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>cell</strong> – Return cell object for the nezca library.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>cell nezca object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="S_Bends.SBend_Euler.create_gds">
+<span class="sig-name descname"><span class="pre">create_gds</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/S_Bends.html#SBend_Euler.create_gds"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#S_Bends.SBend_Euler.create_gds" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>cell</strong> – Return cell object for the nezca library.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>cell nezca object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="S_Bends.SBend_Euler.put">
+<span class="sig-name descname"><span class="pre">put</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/S_Bends.html#SBend_Euler.put"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#S_Bends.SBend_Euler.put" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>*args</strong> (<em>TYPE</em>) – DESCRIPTION.</p></li>
+<li><p><strong>**kwargs</strong> (<em>TYPE</em>) – DESCRIPTION.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Do not chnage.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Cell to put on the nazca GDSII file</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="S_Bends.SBends_Bezier">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">S_Bends.</span></span><span class="sig-name descname"><span class="pre">SBends_Bezier</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">width_WG</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Bend_Length</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer_Struct</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Struct'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer_text_Pots</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'TXT_Ports'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer_Arrow</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ARROW_CLR'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reverse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pins</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/S_Bends.html#SBends_Bezier"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#S_Bends.SBends_Bezier" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>S-Bends Bezier</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="S_Bends.SBends_Bezier.cell_name">
+<span class="sig-name descname"><span class="pre">cell_name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'SBends_Bezier'</span></em><a class="headerlink" href="#S_Bends.SBends_Bezier.cell_name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="S_Bends.SBends_Bezier.create_gds">
+<span class="sig-name descname"><span class="pre">create_gds</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/S_Bends.html#SBends_Bezier.create_gds"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#S_Bends.SBends_Bezier.create_gds" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>cell</strong> – Return cell object for the nezca library.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>cell nezca object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="S_Bends.SBends_Bezier.put">
+<span class="sig-name descname"><span class="pre">put</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/S_Bends.html#SBends_Bezier.put"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#S_Bends.SBends_Bezier.put" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>*args</strong> (<em>TYPE</em>) – DESCRIPTION.</p></li>
+<li><p><strong>**kwargs</strong> (<em>TYPE</em>) – DESCRIPTION.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Do not chnage.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Cell to put on the nazca GDSII file</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="S_Bends.SBends_Cos">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">S_Bends.</span></span><span class="sig-name descname"><span class="pre">SBends_Cos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">width_WG</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Bend_Length</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer_Struct</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Struct'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer_text_Pots</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'TXT_Ports'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer_Arrow</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ARROW_CLR'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reverse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/S_Bends.html#SBends_Cos"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#S_Bends.SBends_Cos" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>S-Bend Cosinus Function</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="S_Bends.SBends_Cos.cell_name">
+<span class="sig-name descname"><span class="pre">cell_name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'SBends_Cos'</span></em><a class="headerlink" href="#S_Bends.SBends_Cos.cell_name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="S_Bends.SBends_Cos.create_gds">
+<span class="sig-name descname"><span class="pre">create_gds</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/S_Bends.html#SBends_Cos.create_gds"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#S_Bends.SBends_Cos.create_gds" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>cell</strong> – Return cell object for the nezca library.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>cell nezca object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="S_Bends.SBends_Cos.put">
+<span class="sig-name descname"><span class="pre">put</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/S_Bends.html#SBends_Cos.put"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#S_Bends.SBends_Cos.put" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>*args</strong> (<em>TYPE</em>) – DESCRIPTION.</p></li>
+<li><p><strong>**kwargs</strong> (<em>TYPE</em>) – DESCRIPTION.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Do not chnage.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Cell to put on the nazca GDSII file</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="S_Bends.end_radius_from_angle">
+<span class="sig-prename descclassname"><span class="pre">S_Bends.</span></span><span class="sig-name descname"><span class="pre">end_radius_from_angle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">angle</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/S_Bends.html#end_radius_from_angle"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#S_Bends.end_radius_from_angle" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="S_Bends.move_matrix">
+<span class="sig-prename descclassname"><span class="pre">S_Bends.</span></span><span class="sig-name descname"><span class="pre">move_matrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">l</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_center</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_center</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_inverted</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">l_start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/S_Bends.html#move_matrix"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#S_Bends.move_matrix" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="S_Bends.radius_from_angle">
+<span class="sig-prename descclassname"><span class="pre">S_Bends.</span></span><span class="sig-name descname"><span class="pre">radius_from_angle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">angle</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_radius</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/S_Bends.html#radius_from_angle"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#S_Bends.radius_from_angle" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="S_Bends.radius_from_spacing">
+<span class="sig-prename descclassname"><span class="pre">S_Bends.</span></span><span class="sig-name descname"><span class="pre">radius_from_spacing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">offset</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/S_Bends.html#radius_from_spacing"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#S_Bends.radius_from_spacing" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="S_Bends.rotate_matrix">
+<span class="sig-prename descclassname"><span class="pre">S_Bends.</span></span><span class="sig-name descname"><span class="pre">rotate_matrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">l</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_flip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_flip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/S_Bends.html#rotate_matrix"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#S_Bends.rotate_matrix" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="S_Bends.xya_sbend_euler">
+<span class="sig-prename descclassname"><span class="pre">S_Bends.</span></span><span class="sig-name descname"><span class="pre">xya_sbend_euler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">radius</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/S_Bends.html#xya_sbend_euler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#S_Bends.xya_sbend_euler" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="S_Bends.xyal_bend_euler">
+<span class="sig-prename descclassname"><span class="pre">S_Bends.</span></span><span class="sig-name descname"><span class="pre">xyal_bend_euler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">radius</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/S_Bends.html#xyal_bend_euler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#S_Bends.xyal_bend_euler" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="S_Bends.xyal_euler2">
+<span class="sig-prename descclassname"><span class="pre">S_Bends.</span></span><span class="sig-name descname"><span class="pre">xyal_euler2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">radius</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/S_Bends.html#xyal_euler2"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#S_Bends.xyal_euler2" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="S_Bends.xyl_euler">
+<span class="sig-prename descclassname"><span class="pre">S_Bends.</span></span><span class="sig-name descname"><span class="pre">xyl_euler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">radius</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/S_Bends.html#xyl_euler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#S_Bends.xyl_euler" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="waveguides-types-straight-waveguides-point-to-point-wavveguides-module">
+<h1>Waveguides Types (Straight Waveguides, Point to Point Wavveguides) module<a class="headerlink" href="#waveguides-types-straight-waveguides-point-to-point-wavveguides-module" title="Link to this heading"></a></h1>
+<dl class="py class" id="module-Waveguides">
+<dt class="sig sig-object py" id="Waveguides.StrWG">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Waveguides.</span></span><span class="sig-name descname"><span class="pre">StrWG</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">width_WG</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">length_WG</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer_Struct</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Struct'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer_text_Pots</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'TXT_Ports'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer_Arrow</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ARROW_CLR'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Waveguides.html#StrWG"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Waveguides.StrWG" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Straight Waveguide</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Waveguides.StrWG.cell_name">
+<span class="sig-name descname"><span class="pre">cell_name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'StrWG'</span></em><a class="headerlink" href="#Waveguides.StrWG.cell_name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Waveguides.StrWG.create_gds">
+<span class="sig-name descname"><span class="pre">create_gds</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Waveguides.html#StrWG.create_gds"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Waveguides.StrWG.create_gds" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>cell</strong> – Return cell object for the nezca library.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>cell nezca object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Waveguides.StrWG.put">
+<span class="sig-name descname"><span class="pre">put</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Waveguides.html#StrWG.put"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Waveguides.StrWG.put" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>*args</strong> (<em>TYPE</em>) – DESCRIPTION.</p></li>
+<li><p><strong>**kwargs</strong> (<em>TYPE</em>) – DESCRIPTION.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Do not chnage.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Cell to put on the nazca GDSII file</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="Waveguides.StrWG_P2P">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Waveguides.</span></span><span class="sig-name descname"><span class="pre">StrWG_P2P</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pin1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pin2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer_Struct</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Struct'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer_text_Pots</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'TXT_Ports'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer_Arrow</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ARROW_CLR'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Waveguides.html#StrWG_P2P"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Waveguides.StrWG_P2P" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Straight Waveguide define from Pin to Pin</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Waveguides.StrWG_P2P.cell_name">
+<span class="sig-name descname"><span class="pre">cell_name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'StrWG_P2P'</span></em><a class="headerlink" href="#Waveguides.StrWG_P2P.cell_name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Waveguides.StrWG_P2P.create_gds_pin_to_pin">
+<span class="sig-name descname"><span class="pre">create_gds_pin_to_pin</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Waveguides.html#StrWG_P2P.create_gds_pin_to_pin"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Waveguides.StrWG_P2P.create_gds_pin_to_pin" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>cell</strong> – Return cell object for the nezca library.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>cell nezca object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Waveguides.StrWG_P2P.put">
+<span class="sig-name descname"><span class="pre">put</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Waveguides.html#StrWG_P2P.put"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Waveguides.StrWG_P2P.put" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>*args</strong> (<em>TYPE</em>) – DESCRIPTION.</p></li>
+<li><p><strong>**kwargs</strong> (<em>TYPE</em>) – DESCRIPTION.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Do not chnage.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Cell to put on the nazca GDSII file</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="layer-deffinitions-module">
+<h1>Layer Deffinitions module<a class="headerlink" href="#layer-deffinitions-module" title="Link to this heading"></a></h1>
+<dl class="py class" id="module-LayerDeff">
+<dt class="sig sig-object py" id="LayerDeff.Layer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">LayerDeff.</span></span><span class="sig-name descname"><span class="pre">Layer</span></span><a class="reference internal" href="_modules/LayerDeff.html#Layer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#LayerDeff.Layer" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Define the Layers for the Payload, Structure, Metal Layers, Vias and Texts.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="LayerDeff.Layer.ARROW_CLR">
+<span class="sig-name descname"><span class="pre">ARROW_CLR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'ARROW_CLR'</span></em><a class="headerlink" href="#LayerDeff.Layer.ARROW_CLR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="LayerDeff.Layer.CLD_OPEN">
+<span class="sig-name descname"><span class="pre">CLD_OPEN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'CLD_OPEN'</span></em><a class="headerlink" href="#LayerDeff.Layer.CLD_OPEN" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="LayerDeff.Layer.DEEP_GRID">
+<span class="sig-name descname"><span class="pre">DEEP_GRID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'DEEP_GRID'</span></em><a class="headerlink" href="#LayerDeff.Layer.DEEP_GRID" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="LayerDeff.Layer.MET1">
+<span class="sig-name descname"><span class="pre">MET1</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MET1'</span></em><a class="headerlink" href="#LayerDeff.Layer.MET1" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="LayerDeff.Layer.MET2">
+<span class="sig-name descname"><span class="pre">MET2</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MET2'</span></em><a class="headerlink" href="#LayerDeff.Layer.MET2" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="LayerDeff.Layer.PAYLOAD">
+<span class="sig-name descname"><span class="pre">PAYLOAD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'PAYLOAD'</span></em><a class="headerlink" href="#LayerDeff.Layer.PAYLOAD" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="LayerDeff.Layer.Struct">
+<span class="sig-name descname"><span class="pre">Struct</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Struct'</span></em><a class="headerlink" href="#LayerDeff.Layer.Struct" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="LayerDeff.Layer.TXT_DEEP_GRID">
+<span class="sig-name descname"><span class="pre">TXT_DEEP_GRID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'TXT_DEEP_GRID'</span></em><a class="headerlink" href="#LayerDeff.Layer.TXT_DEEP_GRID" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="LayerDeff.Layer.TXT_MET1">
+<span class="sig-name descname"><span class="pre">TXT_MET1</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'TXT_MET1'</span></em><a class="headerlink" href="#LayerDeff.Layer.TXT_MET1" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="LayerDeff.Layer.TXT_MET2">
+<span class="sig-name descname"><span class="pre">TXT_MET2</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'TXT_MET2'</span></em><a class="headerlink" href="#LayerDeff.Layer.TXT_MET2" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="LayerDeff.Layer.TXT_Ports">
+<span class="sig-name descname"><span class="pre">TXT_Ports</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'TXT_Ports'</span></em><a class="headerlink" href="#LayerDeff.Layer.TXT_Ports" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="LayerDeff.Layer.TXT_Struct">
+<span class="sig-name descname"><span class="pre">TXT_Struct</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'TXT_Struct'</span></em><a class="headerlink" href="#LayerDeff.Layer.TXT_Struct" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="LayerDeff.Layer.TXT_VIA">
+<span class="sig-name descname"><span class="pre">TXT_VIA</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'TXT_VIA'</span></em><a class="headerlink" href="#LayerDeff.Layer.TXT_VIA" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="LayerDeff.Layer.VIA">
+<span class="sig-name descname"><span class="pre">VIA</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'VIA'</span></em><a class="headerlink" href="#LayerDeff.Layer.VIA" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="LayerDeff.XS">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">LayerDeff.</span></span><span class="sig-name descname"><span class="pre">XS</span></span><a class="reference internal" href="_modules/LayerDeff.html#XS"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#LayerDeff.XS" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="LayerDeff.XS.ARROW_CLR">
+<span class="sig-name descname"><span class="pre">ARROW_CLR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'ARROW_CLR'</span></em><a class="headerlink" href="#LayerDeff.XS.ARROW_CLR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="LayerDeff.XS.CLD_OPEN">
+<span class="sig-name descname"><span class="pre">CLD_OPEN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'CLD_OPEN'</span></em><a class="headerlink" href="#LayerDeff.XS.CLD_OPEN" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="LayerDeff.XS.DEEP_GRID">
+<span class="sig-name descname"><span class="pre">DEEP_GRID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'DEEP_GRID'</span></em><a class="headerlink" href="#LayerDeff.XS.DEEP_GRID" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="LayerDeff.XS.MET1">
+<span class="sig-name descname"><span class="pre">MET1</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MET1'</span></em><a class="headerlink" href="#LayerDeff.XS.MET1" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="LayerDeff.XS.MET2">
+<span class="sig-name descname"><span class="pre">MET2</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MET2'</span></em><a class="headerlink" href="#LayerDeff.XS.MET2" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="LayerDeff.XS.Struct">
+<span class="sig-name descname"><span class="pre">Struct</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Struct'</span></em><a class="headerlink" href="#LayerDeff.XS.Struct" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="LayerDeff.XS.TXT_DEEP_GRID">
+<span class="sig-name descname"><span class="pre">TXT_DEEP_GRID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'TXT_DEEP_GRID'</span></em><a class="headerlink" href="#LayerDeff.XS.TXT_DEEP_GRID" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="LayerDeff.XS.TXT_MET1">
+<span class="sig-name descname"><span class="pre">TXT_MET1</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'TXT_MET1'</span></em><a class="headerlink" href="#LayerDeff.XS.TXT_MET1" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="LayerDeff.XS.TXT_MET2">
+<span class="sig-name descname"><span class="pre">TXT_MET2</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'TXT_MET2'</span></em><a class="headerlink" href="#LayerDeff.XS.TXT_MET2" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="LayerDeff.XS.TXT_Ports">
+<span class="sig-name descname"><span class="pre">TXT_Ports</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'TXT_Ports'</span></em><a class="headerlink" href="#LayerDeff.XS.TXT_Ports" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="LayerDeff.XS.TXT_Struct">
+<span class="sig-name descname"><span class="pre">TXT_Struct</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'TXT_Struct'</span></em><a class="headerlink" href="#LayerDeff.XS.TXT_Struct" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="LayerDeff.XS.TXT_VIA">
+<span class="sig-name descname"><span class="pre">TXT_VIA</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'TXT_VIA'</span></em><a class="headerlink" href="#LayerDeff.XS.TXT_VIA" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="LayerDeff.XS.VIA">
+<span class="sig-name descname"><span class="pre">VIA</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'VIA'</span></em><a class="headerlink" href="#LayerDeff.XS.VIA" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </section>
 <section id="indices-and-tables">
 <h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Link to this heading"></a></h1>

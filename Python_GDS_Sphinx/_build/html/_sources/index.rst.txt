@@ -19,7 +19,25 @@ GDS sctructures are made. And in the secound path there is an for loop Example t
 an GDSII file with all the objects available in the library. 
 
 
-.. include:: NazcaConstructor.rst
+
+.. include:: rst/Border.rst
+
+
+.. include:: rst/Coupler.rst
+
+
+.. include:: rst/Modulators.rst
+
+
+.. include:: rst/S_Bends.rst
+
+
+.. include:: rst/Waveguides.rst
+
+
+.. include:: rst/LayerDeff.rst
+
+
 
 Indices and tables
 ==================

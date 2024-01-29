@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>S Bends (Cubic Bezier Function Bend, Cosinus Function Bend, Euler Function Bend) module &mdash; Python GDS with Nazca 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=f2a433a1"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Python GDS with Nazca
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">S Bends (Cubic Bezier Function Bend, Cosinus Function Bend, Euler Function Bend) module</a><ul>
+<li><a class="reference internal" href="#S_Bends.Euler2"><code class="docutils literal notranslate"><span class="pre">Euler2</span></code></a><ul>
+<li><a class="reference internal" href="#S_Bends.Euler2.cell_name"><code class="docutils literal notranslate"><span class="pre">Euler2.cell_name</span></code></a></li>
+<li><a class="reference internal" href="#S_Bends.Euler2.create_gds"><code class="docutils literal notranslate"><span class="pre">Euler2.create_gds()</span></code></a></li>
+<li><a class="reference internal" href="#S_Bends.Euler2.put"><code class="docutils literal notranslate"><span class="pre">Euler2.put()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#S_Bends.SBend_Euler"><code class="docutils literal notranslate"><span class="pre">SBend_Euler</span></code></a><ul>
+<li><a class="reference internal" href="#S_Bends.SBend_Euler.cell_name"><code class="docutils literal notranslate"><span class="pre">SBend_Euler.cell_name</span></code></a></li>
+<li><a class="reference internal" href="#S_Bends.SBend_Euler.cell_name_bend"><code class="docutils literal notranslate"><span class="pre">SBend_Euler.cell_name_bend</span></code></a></li>
+<li><a class="reference internal" href="#S_Bends.SBend_Euler.create_bend"><code class="docutils literal notranslate"><span class="pre">SBend_Euler.create_bend()</span></code></a></li>
+<li><a class="reference internal" href="#S_Bends.SBend_Euler.create_gds"><code class="docutils literal notranslate"><span class="pre">SBend_Euler.create_gds()</span></code></a></li>
+<li><a class="reference internal" href="#S_Bends.SBend_Euler.put"><code class="docutils literal notranslate"><span class="pre">SBend_Euler.put()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#S_Bends.SBends_Bezier"><code class="docutils literal notranslate"><span class="pre">SBends_Bezier</span></code></a><ul>
+<li><a class="reference internal" href="#S_Bends.SBends_Bezier.cell_name"><code class="docutils literal notranslate"><span class="pre">SBends_Bezier.cell_name</span></code></a></li>
+<li><a class="reference internal" href="#S_Bends.SBends_Bezier.create_gds"><code class="docutils literal notranslate"><span class="pre">SBends_Bezier.create_gds()</span></code></a></li>
+<li><a class="reference internal" href="#S_Bends.SBends_Bezier.put"><code class="docutils literal notranslate"><span class="pre">SBends_Bezier.put()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#S_Bends.SBends_Cos"><code class="docutils literal notranslate"><span class="pre">SBends_Cos</span></code></a><ul>
+<li><a class="reference internal" href="#S_Bends.SBends_Cos.cell_name"><code class="docutils literal notranslate"><span class="pre">SBends_Cos.cell_name</span></code></a></li>
+<li><a class="reference internal" href="#S_Bends.SBends_Cos.create_gds"><code class="docutils literal notranslate"><span class="pre">SBends_Cos.create_gds()</span></code></a></li>
+<li><a class="reference internal" href="#S_Bends.SBends_Cos.put"><code class="docutils literal notranslate"><span class="pre">SBends_Cos.put()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#S_Bends.end_radius_from_angle"><code class="docutils literal notranslate"><span class="pre">end_radius_from_angle()</span></code></a></li>
+<li><a class="reference internal" href="#S_Bends.move_matrix"><code class="docutils literal notranslate"><span class="pre">move_matrix()</span></code></a></li>
+<li><a class="reference internal" href="#S_Bends.radius_from_angle"><code class="docutils literal notranslate"><span class="pre">radius_from_angle()</span></code></a></li>
+<li><a class="reference internal" href="#S_Bends.radius_from_spacing"><code class="docutils literal notranslate"><span class="pre">radius_from_spacing()</span></code></a></li>
+<li><a class="reference internal" href="#S_Bends.rotate_matrix"><code class="docutils literal notranslate"><span class="pre">rotate_matrix()</span></code></a></li>
+<li><a class="reference internal" href="#S_Bends.xya_sbend_euler"><code class="docutils literal notranslate"><span class="pre">xya_sbend_euler()</span></code></a></li>
+<li><a class="reference internal" href="#S_Bends.xyal_bend_euler"><code class="docutils literal notranslate"><span class="pre">xyal_bend_euler()</span></code></a></li>
+<li><a class="reference internal" href="#S_Bends.xyal_euler2"><code class="docutils literal notranslate"><span class="pre">xyal_euler2()</span></code></a></li>
+<li><a class="reference internal" href="#S_Bends.xyl_euler"><code class="docutils literal notranslate"><span class="pre">xyl_euler()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Python GDS with Nazca</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">S Bends (Cubic Bezier Function Bend, Cosinus Function Bend, Euler Function Bend) module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/rst/S_Bends.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="s-bends-cubic-bezier-function-bend-cosinus-function-bend-euler-function-bend-module">
+<h1>S Bends (Cubic Bezier Function Bend, Cosinus Function Bend, Euler Function Bend) module<a class="headerlink" href="#s-bends-cubic-bezier-function-bend-cosinus-function-bend-euler-function-bend-module" title="Link to this heading"></a></h1>
+<dl class="py class" id="module-S_Bends">
+<dt class="sig sig-object py" id="S_Bends.Euler2">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">S_Bends.</span></span><span class="sig-name descname"><span class="pre">Euler2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">waveguide_width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">90</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">50</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer_Struct</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Struct'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer_text_Pots</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'TXT_Ports'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer_Arrow</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ARROW_CLR'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/S_Bends.html#Euler2"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#S_Bends.Euler2" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Euler curve (Function is tooken from CSEM)</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="S_Bends.Euler2.cell_name">
+<span class="sig-name descname"><span class="pre">cell_name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Euler2'</span></em><a class="headerlink" href="#S_Bends.Euler2.cell_name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="S_Bends.Euler2.create_gds">
+<span class="sig-name descname"><span class="pre">create_gds</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/S_Bends.html#Euler2.create_gds"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#S_Bends.Euler2.create_gds" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>cell</strong> – Return cell object for the nezca library.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>cell nezca object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="S_Bends.Euler2.put">
+<span class="sig-name descname"><span class="pre">put</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/S_Bends.html#Euler2.put"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#S_Bends.Euler2.put" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>*args</strong> (<em>TYPE</em>) – DESCRIPTION.</p></li>
+<li><p><strong>**kwargs</strong> (<em>TYPE</em>) – DESCRIPTION.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Do not chnage.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Cell to put on the nazca GDSII file</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="S_Bends.SBend_Euler">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">S_Bends.</span></span><span class="sig-name descname"><span class="pre">SBend_Euler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">width_WG</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Bend_Length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">50</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reverse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer_Struct</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Struct'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer_text_Pots</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'TXT_Ports'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer_Arrow</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ARROW_CLR'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/S_Bends.html#SBend_Euler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#S_Bends.SBend_Euler" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Euler S-Bends tooken from (CSEM)</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="S_Bends.SBend_Euler.cell_name">
+<span class="sig-name descname"><span class="pre">cell_name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'SBendEuler'</span></em><a class="headerlink" href="#S_Bends.SBend_Euler.cell_name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="S_Bends.SBend_Euler.cell_name_bend">
+<span class="sig-name descname"><span class="pre">cell_name_bend</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'SBendEuler_bend'</span></em><a class="headerlink" href="#S_Bends.SBend_Euler.cell_name_bend" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="S_Bends.SBend_Euler.create_bend">
+<span class="sig-name descname"><span class="pre">create_bend</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">radius</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/S_Bends.html#SBend_Euler.create_bend"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#S_Bends.SBend_Euler.create_bend" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>radius</strong> (<em>int/float</em>) – Rdius of the Euler curve.</p></li>
+<li><p><strong>angle</strong> (<em>int/float</em>) – Angle of the euler bend.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>cell</strong> – Return cell object for the nezca library.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>cell nezca object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="S_Bends.SBend_Euler.create_gds">
+<span class="sig-name descname"><span class="pre">create_gds</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/S_Bends.html#SBend_Euler.create_gds"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#S_Bends.SBend_Euler.create_gds" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>cell</strong> – Return cell object for the nezca library.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>cell nezca object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="S_Bends.SBend_Euler.put">
+<span class="sig-name descname"><span class="pre">put</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/S_Bends.html#SBend_Euler.put"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#S_Bends.SBend_Euler.put" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>*args</strong> (<em>TYPE</em>) – DESCRIPTION.</p></li>
+<li><p><strong>**kwargs</strong> (<em>TYPE</em>) – DESCRIPTION.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Do not chnage.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Cell to put on the nazca GDSII file</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="S_Bends.SBends_Bezier">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">S_Bends.</span></span><span class="sig-name descname"><span class="pre">SBends_Bezier</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">width_WG</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Bend_Length</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer_Struct</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Struct'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer_text_Pots</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'TXT_Ports'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer_Arrow</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ARROW_CLR'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reverse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pins</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/S_Bends.html#SBends_Bezier"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#S_Bends.SBends_Bezier" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>S-Bends Bezier</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="S_Bends.SBends_Bezier.cell_name">
+<span class="sig-name descname"><span class="pre">cell_name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'SBends_Bezier'</span></em><a class="headerlink" href="#S_Bends.SBends_Bezier.cell_name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="S_Bends.SBends_Bezier.create_gds">
+<span class="sig-name descname"><span class="pre">create_gds</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/S_Bends.html#SBends_Bezier.create_gds"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#S_Bends.SBends_Bezier.create_gds" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>cell</strong> – Return cell object for the nezca library.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>cell nezca object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="S_Bends.SBends_Bezier.put">
+<span class="sig-name descname"><span class="pre">put</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/S_Bends.html#SBends_Bezier.put"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#S_Bends.SBends_Bezier.put" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>*args</strong> (<em>TYPE</em>) – DESCRIPTION.</p></li>
+<li><p><strong>**kwargs</strong> (<em>TYPE</em>) – DESCRIPTION.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Do not chnage.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Cell to put on the nazca GDSII file</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="S_Bends.SBends_Cos">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">S_Bends.</span></span><span class="sig-name descname"><span class="pre">SBends_Cos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">width_WG</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Bend_Length</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer_Struct</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Struct'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer_text_Pots</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'TXT_Ports'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer_Arrow</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ARROW_CLR'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reverse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/S_Bends.html#SBends_Cos"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#S_Bends.SBends_Cos" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>S-Bend Cosinus Function</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="S_Bends.SBends_Cos.cell_name">
+<span class="sig-name descname"><span class="pre">cell_name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'SBends_Cos'</span></em><a class="headerlink" href="#S_Bends.SBends_Cos.cell_name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="S_Bends.SBends_Cos.create_gds">
+<span class="sig-name descname"><span class="pre">create_gds</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/S_Bends.html#SBends_Cos.create_gds"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#S_Bends.SBends_Cos.create_gds" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>cell</strong> – Return cell object for the nezca library.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>cell nezca object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="S_Bends.SBends_Cos.put">
+<span class="sig-name descname"><span class="pre">put</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/S_Bends.html#SBends_Cos.put"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#S_Bends.SBends_Cos.put" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>*args</strong> (<em>TYPE</em>) – DESCRIPTION.</p></li>
+<li><p><strong>**kwargs</strong> (<em>TYPE</em>) – DESCRIPTION.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Do not chnage.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Cell to put on the nazca GDSII file</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="S_Bends.end_radius_from_angle">
+<span class="sig-prename descclassname"><span class="pre">S_Bends.</span></span><span class="sig-name descname"><span class="pre">end_radius_from_angle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">angle</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/S_Bends.html#end_radius_from_angle"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#S_Bends.end_radius_from_angle" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="S_Bends.move_matrix">
+<span class="sig-prename descclassname"><span class="pre">S_Bends.</span></span><span class="sig-name descname"><span class="pre">move_matrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">l</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_center</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_center</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_inverted</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">l_start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/S_Bends.html#move_matrix"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#S_Bends.move_matrix" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="S_Bends.radius_from_angle">
+<span class="sig-prename descclassname"><span class="pre">S_Bends.</span></span><span class="sig-name descname"><span class="pre">radius_from_angle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">angle</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_radius</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/S_Bends.html#radius_from_angle"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#S_Bends.radius_from_angle" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="S_Bends.radius_from_spacing">
+<span class="sig-prename descclassname"><span class="pre">S_Bends.</span></span><span class="sig-name descname"><span class="pre">radius_from_spacing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">offset</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/S_Bends.html#radius_from_spacing"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#S_Bends.radius_from_spacing" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="S_Bends.rotate_matrix">
+<span class="sig-prename descclassname"><span class="pre">S_Bends.</span></span><span class="sig-name descname"><span class="pre">rotate_matrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">l</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_flip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_flip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/S_Bends.html#rotate_matrix"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#S_Bends.rotate_matrix" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="S_Bends.xya_sbend_euler">
+<span class="sig-prename descclassname"><span class="pre">S_Bends.</span></span><span class="sig-name descname"><span class="pre">xya_sbend_euler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">radius</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/S_Bends.html#xya_sbend_euler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#S_Bends.xya_sbend_euler" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="S_Bends.xyal_bend_euler">
+<span class="sig-prename descclassname"><span class="pre">S_Bends.</span></span><span class="sig-name descname"><span class="pre">xyal_bend_euler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">radius</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/S_Bends.html#xyal_bend_euler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#S_Bends.xyal_bend_euler" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="S_Bends.xyal_euler2">
+<span class="sig-prename descclassname"><span class="pre">S_Bends.</span></span><span class="sig-name descname"><span class="pre">xyal_euler2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">radius</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/S_Bends.html#xyal_euler2"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#S_Bends.xyal_euler2" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="S_Bends.xyl_euler">
+<span class="sig-prename descclassname"><span class="pre">S_Bends.</span></span><span class="sig-name descname"><span class="pre">xyl_euler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">radius</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/S_Bends.html#xyl_euler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#S_Bends.xyl_euler" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Martin Mihaylov.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

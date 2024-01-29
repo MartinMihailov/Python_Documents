@@ -1,0 +1,7 @@
+Chip Border module
+==============
+
+.. automodule:: Border
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coupler &mdash; Python GDS with Nazca 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=f2a433a1"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Python GDS with Nazca
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"></div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Python GDS with Nazca</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Module code</a></li>
+      <li class="breadcrumb-item active">Coupler</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for Coupler</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">nazca</span> <span class="k">as</span> <span class="nn">nd</span>
+<span class="kn">from</span> <span class="nn">LayerDeff</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">S_Bends</span> <span class="kn">import</span> <span class="o">*</span>
+
+
+
+
+
+
+<div class="viewcode-block" id="MMI1x2">
+<a class="viewcode-back" href="../rst/Coupler.html#Coupler.MMI1x2">[docs]</a>
+<span class="k">class</span> <span class="nc">MMI1x2</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    1x2 MMI GDS Class</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">cell_name</span> <span class="o">=</span> <span class="s2">&quot;MMI1x2&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">width_MMI</span><span class="p">,</span> <span class="n">length_MMI</span><span class="p">,</span> <span class="n">width_WG</span><span class="p">,</span> <span class="n">length_WG</span><span class="p">,</span> <span class="n">gap</span><span class="p">,</span> <span class="n">layer_Struct</span><span class="o">=</span> <span class="n">Layer</span><span class="o">.</span><span class="n">Struct</span><span class="p">,</span> <span class="n">layer_text_Pots</span> <span class="o">=</span> <span class="n">Layer</span><span class="o">.</span><span class="n">TXT_Ports</span><span class="p">,</span> <span class="n">layer_Arrow</span> <span class="o">=</span> <span class="n">Layer</span><span class="o">.</span><span class="n">ARROW_CLR</span> <span class="p">,</span> <span class="n">spacing</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">lenght_bend</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">pins</span> <span class="o">=</span> <span class="kc">True</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        </span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        width_MMI : int/float</span>
+<span class="sd">            Width of the MMI.</span>
+<span class="sd">        length_MMI : int/float</span>
+<span class="sd">            Length of the MMI.</span>
+<span class="sd">        width_WG : int/float</span>
+<span class="sd">            Width of the Waveguide.</span>
+<span class="sd">        length_WG : int/float</span>
+<span class="sd">            Length of the Waveguide.</span>
+<span class="sd">        gap : int/float</span>
+<span class="sd">            Gap between the output Waveguides.</span>
+<span class="sd">        layer_Struct : layer lib parametes, optional</span>
+<span class="sd">            The default is Layer.Struct.</span>
+<span class="sd">        layer_text_Pots : layer lib parametes, optional</span>
+<span class="sd">            The default is Layer.Struct. The default is Layer.TXT_Ports.</span>
+<span class="sd">        layer_Arrow : layer lib parametes, optional</span>
+<span class="sd">            The default is Layer.Struct. The default is Layer.ARROW_CLR.</span>
+<span class="sd">        spacing : int/float, optional</span>
+<span class="sd">            Space between the Outputs of the Waveguides when S-Bends are used. The default is None.</span>
+<span class="sd">        lenght_bend : int/float, optional</span>
+<span class="sd">            Length of the S-Bends. The default is None.</span>
+<span class="sd">        pins : boolen, optional</span>
+<span class="sd">            Show pins in the GDSII file. The default is True.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        None.</span>
+
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">width_MMI</span> <span class="o">=</span> <span class="n">width_MMI</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">length_MMI</span> <span class="o">=</span> <span class="n">length_MMI</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span> <span class="o">=</span> <span class="n">width_WG</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">length_WG</span> <span class="o">=</span> <span class="n">length_WG</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gap</span> <span class="o">=</span> <span class="n">gap</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pins</span> <span class="o">=</span> <span class="n">pins</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">layer_Struct</span> <span class="o">=</span> <span class="n">layer_Struct</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">layer_text_Pots</span> <span class="o">=</span> <span class="n">layer_text_Pots</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">layer_Arrow</span> <span class="o">=</span> <span class="n">layer_Arrow</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">spacing</span> <span class="o">=</span> <span class="n">spacing</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">lenght_bend</span> <span class="o">=</span> <span class="n">lenght_bend</span>
+
+
+        <span class="c1"># create cell</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_cell</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_gds</span><span class="p">()</span>
+
+<div class="viewcode-block" id="MMI1x2.create_gds">
+<a class="viewcode-back" href="../rst/Coupler.html#Coupler.MMI1x2.create_gds">[docs]</a>
+    <span class="k">def</span> <span class="nf">create_gds</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        </span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        cell : cell nezca object</span>
+<span class="sd">            Return cell object for the nezca library.</span>
+
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">with</span> <span class="n">nd</span><span class="o">.</span><span class="n">Cell</span><span class="p">(</span><span class="n">MMI1x2</span><span class="o">.</span><span class="n">cell_name</span><span class="p">)</span> <span class="k">as</span> <span class="n">cell</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">spacing</span><span class="p">:</span>
+
+                <span class="c1"># calculate spacing and gap difference</span>
+                <span class="n">space</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">spacing</span><span class="o">/</span><span class="mi">2</span> 
+
+                <span class="c1"># Create the body and outputs of the 1x2 MMI</span>
+                <span class="n">cell_MMI_Body</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">width_MMI</span> <span class="o">/</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">length_MMI</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">width_MMI</span> <span class="o">/</span> <span class="mi">2</span><span class="p">),(</span><span class="bp">self</span><span class="o">.</span><span class="n">length_MMI</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">width_MMI</span> <span class="o">/</span> <span class="mi">2</span><span class="p">),(</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">length_MMI</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">width_MMI</span> <span class="o">/</span> <span class="mi">2</span><span class="p">),(</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">length_MMI</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">width_MMI</span> <span class="o">/</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">width_MMI</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)]</span>
+                <span class="n">nd</span><span class="o">.</span><span class="n">Polygon</span><span class="p">(</span><span class="n">points</span><span class="o">=</span><span class="n">cell_MMI_Body</span><span class="p">,</span> <span class="n">layer</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">layer_Struct</span><span class="p">)</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+                <span class="n">cell_WG_In</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">length_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">),(</span><span class="bp">self</span><span class="o">.</span><span class="n">length_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">),(</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">length_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">),(</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">length_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)]</span>
+                <span class="n">nd</span><span class="o">.</span><span class="n">Polygon</span><span class="p">(</span><span class="n">points</span><span class="o">=</span><span class="n">cell_WG_In</span><span class="p">,</span> <span class="n">layer</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">layer_Struct</span><span class="p">)</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">length_MMI</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">length_WG</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+                <span class="n">cell_WG_Out_Top</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">length_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">),(</span><span class="bp">self</span><span class="o">.</span><span class="n">length_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">),(</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">length_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">),(</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">length_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)]</span>
+                <span class="n">nd</span><span class="o">.</span><span class="n">Polygon</span><span class="p">(</span><span class="n">points</span><span class="o">=</span><span class="n">cell_WG_Out_Top</span><span class="p">,</span> <span class="n">layer</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">layer_Struct</span><span class="p">)</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">length_MMI</span><span class="o">/</span><span class="mi">2</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">length_WG</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span><span class="o">/</span><span class="mi">2</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">gap</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+                <span class="n">cell_WG_Out_Bot</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">length_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">),(</span><span class="bp">self</span><span class="o">.</span><span class="n">length_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">),(</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">length_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">),(</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">length_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)]</span>
+                <span class="n">nd</span><span class="o">.</span><span class="n">Polygon</span><span class="p">(</span><span class="n">points</span><span class="o">=</span><span class="n">cell_WG_Out_Bot</span><span class="p">,</span> <span class="n">layer</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">layer_Struct</span><span class="p">)</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">length_MMI</span><span class="o">/</span><span class="mi">2</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">length_WG</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span><span class="o">/</span><span class="mi">2</span> <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">gap</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+
+                <span class="c1"># create the S-Bends </span>
+                <span class="n">SBend_Top</span> <span class="o">=</span> <span class="n">SBends_Bezier</span><span class="p">(</span><span class="n">width_WG</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span><span class="p">,</span> <span class="n">Bend_Length</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lenght_bend</span><span class="p">,</span> <span class="n">Offset</span> <span class="o">=</span> <span class="n">space</span><span class="p">,</span> <span class="n">reverse</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">pins</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">length_MMI</span><span class="o">/</span><span class="mi">2</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">length_WG</span><span class="p">,</span>  <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span><span class="o">/</span><span class="mi">2</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">gap</span><span class="o">/</span><span class="mi">2</span> <span class="o">-</span> <span class="n">space</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+                <span class="n">SBend_Bot</span> <span class="o">=</span> <span class="n">SBends_Bezier</span><span class="p">(</span><span class="n">width_WG</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span><span class="p">,</span> <span class="n">Bend_Length</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lenght_bend</span><span class="p">,</span> <span class="n">Offset</span> <span class="o">=</span> <span class="n">space</span><span class="p">,</span> <span class="n">pins</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">length_MMI</span><span class="o">/</span><span class="mi">2</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">length_WG</span><span class="p">,</span>  <span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span><span class="o">/</span><span class="mi">2</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">gap</span><span class="o">/</span><span class="mi">2</span> <span class="o">+</span> <span class="n">space</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+                
+
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">pins</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+                    <span class="n">nd</span><span class="o">.</span><span class="n">Pin</span><span class="p">(</span><span class="s1">&#39;MMI_In&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span><span class="p">)</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">length_MMI</span><span class="o">/</span><span class="mi">2</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">length_WG</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">180</span><span class="p">)</span>
+                    <span class="n">nd</span><span class="o">.</span><span class="n">Pin</span><span class="p">(</span><span class="s1">&#39;MMI_Out_Top&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span><span class="p">)</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">length_MMI</span><span class="o">/</span><span class="mi">2</span><span class="o">+</span><span class="bp">self</span><span class="o">.</span><span class="n">length_WG</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">lenght_bend</span><span class="p">,</span> <span class="n">space</span><span class="o">+</span><span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span><span class="o">/</span><span class="mi">2</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">gap</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+                    <span class="n">nd</span><span class="o">.</span><span class="n">Pin</span><span class="p">(</span><span class="s1">&#39;MMI_Out_Bot&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span><span class="p">)</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">length_MMI</span><span class="o">/</span><span class="mi">2</span><span class="o">+</span><span class="bp">self</span><span class="o">.</span><span class="n">length_WG</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">lenght_bend</span><span class="p">,</span> <span class="o">-</span><span class="n">space</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span><span class="o">/</span><span class="mi">2</span> <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">gap</span><span class="o">/</span><span class="mi">2</span> <span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+                    <span class="n">nd</span><span class="o">.</span><span class="n">put_stub</span><span class="p">(</span><span class="n">pinlayer</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">layer_Arrow</span><span class="p">,</span> <span class="n">annotation_layer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">layer_text_Pots</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">nd</span><span class="o">.</span><span class="n">put_stub</span><span class="p">()</span>
+
+
+
+            <span class="k">else</span><span class="p">:</span>
+                
+                 <span class="c1"># Create the body and outputs of the 1x2 MMI</span>
+                <span class="n">cell_MMI_Body</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">width_MMI</span> <span class="o">/</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">length_MMI</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">width_MMI</span> <span class="o">/</span> <span class="mi">2</span><span class="p">),(</span><span class="bp">self</span><span class="o">.</span><span class="n">length_MMI</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">width_MMI</span> <span class="o">/</span> <span class="mi">2</span><span class="p">),(</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">length_MMI</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">width_MMI</span> <span class="o">/</span> <span class="mi">2</span><span class="p">),(</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">length_MMI</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">width_MMI</span> <span class="o">/</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">width_MMI</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)]</span>
+                <span class="n">nd</span><span class="o">.</span><span class="n">Polygon</span><span class="p">(</span><span class="n">points</span><span class="o">=</span><span class="n">cell_MMI_Body</span><span class="p">,</span> <span class="n">layer</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">layer_Struct</span><span class="p">)</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+                <span class="n">cell_WG_In</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">length_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">),(</span><span class="bp">self</span><span class="o">.</span><span class="n">length_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">),(</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">length_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">),(</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">length_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)]</span>
+                <span class="n">nd</span><span class="o">.</span><span class="n">Polygon</span><span class="p">(</span><span class="n">points</span><span class="o">=</span><span class="n">cell_WG_In</span><span class="p">,</span> <span class="n">layer</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">layer_Struct</span><span class="p">)</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">length_MMI</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">length_WG</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+                <span class="n">cell_WG_Out_Top</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">length_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">),(</span><span class="bp">self</span><span class="o">.</span><span class="n">length_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">),(</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">length_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">),(</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">length_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)]</span>
+                <span class="n">nd</span><span class="o">.</span><span class="n">Polygon</span><span class="p">(</span><span class="n">points</span><span class="o">=</span><span class="n">cell_WG_Out_Top</span><span class="p">,</span> <span class="n">layer</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">layer_Struct</span><span class="p">)</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">length_MMI</span><span class="o">/</span><span class="mi">2</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">length_WG</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span><span class="o">/</span><span class="mi">2</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">gap</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+                <span class="n">cell_WG_Out_Bot</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">length_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">),(</span><span class="bp">self</span><span class="o">.</span><span class="n">length_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">),(</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">length_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">),(</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">length_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)]</span>
+                <span class="n">nd</span><span class="o">.</span><span class="n">Polygon</span><span class="p">(</span><span class="n">points</span><span class="o">=</span><span class="n">cell_WG_Out_Bot</span><span class="p">,</span> <span class="n">layer</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">layer_Struct</span><span class="p">)</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">length_MMI</span><span class="o">/</span><span class="mi">2</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">length_WG</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span><span class="o">/</span><span class="mi">2</span> <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">gap</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">pins</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+                    <span class="n">nd</span><span class="o">.</span><span class="n">Pin</span><span class="p">(</span><span class="s1">&#39;MMI_In&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span><span class="p">)</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">length_MMI</span><span class="o">/</span><span class="mi">2</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">length_WG</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">180</span><span class="p">)</span>
+                    <span class="n">nd</span><span class="o">.</span><span class="n">Pin</span><span class="p">(</span><span class="s1">&#39;MMI_Out_Top&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span><span class="p">)</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">length_MMI</span><span class="o">/</span><span class="mi">2</span><span class="o">+</span><span class="bp">self</span><span class="o">.</span><span class="n">length_WG</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span><span class="o">/</span><span class="mi">2</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">gap</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+                    <span class="n">nd</span><span class="o">.</span><span class="n">Pin</span><span class="p">(</span><span class="s1">&#39;MMI_Out_Bot&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span><span class="p">)</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">length_MMI</span><span class="o">/</span><span class="mi">2</span><span class="o">+</span><span class="bp">self</span><span class="o">.</span><span class="n">length_WG</span><span class="p">,</span> <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span><span class="o">/</span><span class="mi">2</span> <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">gap</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+                    <span class="n">nd</span><span class="o">.</span><span class="n">put_stub</span><span class="p">(</span><span class="n">pinlayer</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">layer_Arrow</span><span class="p">,</span> <span class="n">annotation_layer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">layer_text_Pots</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">nd</span><span class="o">.</span><span class="n">put_stub</span><span class="p">()</span>
+
+
+        <span class="k">return</span> <span class="n">cell</span></div>
+
+
+    
+<div class="viewcode-block" id="MMI1x2.put">
+<a class="viewcode-back" href="../rst/Coupler.html#Coupler.MMI1x2.put">[docs]</a>
+    <span class="k">def</span> <span class="nf">put</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        </span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        *args : TYPE</span>
+<span class="sd">            DESCRIPTION.</span>
+<span class="sd">        **kwargs : TYPE</span>
+<span class="sd">            DESCRIPTION.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        Cell to put on the nazca GDSII file</span>
+<span class="sd">            Do not chnage.</span>
+
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cell</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="viewcode-block" id="DirectionalCoupler">
+<a class="viewcode-back" href="../rst/Coupler.html#Coupler.DirectionalCoupler">[docs]</a>
+<span class="k">class</span> <span class="nc">DirectionalCoupler</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Directional Coupler</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">cell_name</span> <span class="o">=</span> <span class="s2">&quot;DirectionalCoupler&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">length_DC</span><span class="p">,</span> <span class="n">width_WG</span><span class="p">,</span> <span class="n">gap</span><span class="p">,</span> <span class="n">layer_Struct</span><span class="o">=</span><span class="n">Layer</span><span class="o">.</span><span class="n">Struct</span><span class="p">,</span> <span class="n">layer_text_Pots</span> <span class="o">=</span> <span class="n">Layer</span><span class="o">.</span><span class="n">TXT_Ports</span><span class="p">,</span> <span class="n">layer_Arrow</span> <span class="o">=</span> <span class="n">Layer</span><span class="o">.</span><span class="n">ARROW_CLR</span><span class="p">,</span> <span class="n">spacing</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">lenght_bend</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">pins</span> <span class="o">=</span> <span class="kc">True</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        </span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        length_DC : int/float</span>
+<span class="sd">            Length of the Directional Coupler.</span>
+<span class="sd">        width_WG : int/float</span>
+<span class="sd">            Width of the Directional Coupler.</span>
+<span class="sd">        gap : int/float</span>
+<span class="sd">            Space between the waveguides of the Directional Coupler.</span>
+<span class="sd">        layer_Struct : list, optional</span>
+<span class="sd">            Layers Definition, do not change! The default is Layer.Struct.</span>
+<span class="sd">        layer_text_Pots : list, optional</span>
+<span class="sd">            Layers Definition, do not change! The default is Layer.TXT_Ports.</span>
+<span class="sd">        layer_Arrow : list, optional</span>
+<span class="sd">           Layers Definition, do not change! The default is Layer.ARROW_CLR.</span>
+<span class="sd">        spacing : int/float, optional</span>
+<span class="sd">            Space between the output and input waveguides after the S-Bends. The default is None.</span>
+<span class="sd">        lenght_bend : int/float, optional</span>
+<span class="sd">            Length of the S-Bends. The default is None.</span>
+<span class="sd">        pins : boolen, optional</span>
+<span class="sd">            Pins will be set on the GDSII file. The default is True.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        None.</span>
+
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">length_DC</span> <span class="o">=</span> <span class="n">length_DC</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span> <span class="o">=</span> <span class="n">width_WG</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gap</span> <span class="o">=</span> <span class="n">gap</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pins</span> <span class="o">=</span> <span class="n">pins</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">layer_Struct</span> <span class="o">=</span> <span class="n">layer_Struct</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">layer_text_Pots</span> <span class="o">=</span> <span class="n">layer_text_Pots</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">layer_Arrow</span> <span class="o">=</span> <span class="n">layer_Arrow</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">spacing</span> <span class="o">=</span> <span class="n">spacing</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">lenght_bend</span> <span class="o">=</span> <span class="n">lenght_bend</span>
+
+
+        <span class="c1"># create cell</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_cell</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_gds</span><span class="p">()</span>
+
+<div class="viewcode-block" id="DirectionalCoupler.create_gds">
+<a class="viewcode-back" href="../rst/Coupler.html#Coupler.DirectionalCoupler.create_gds">[docs]</a>
+    <span class="k">def</span> <span class="nf">create_gds</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        </span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        cell : cell nezca object</span>
+<span class="sd">            Return cell object for the nezca library.</span>
+
+
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">with</span> <span class="n">nd</span><span class="o">.</span><span class="n">Cell</span><span class="p">(</span><span class="n">DirectionalCoupler</span><span class="o">.</span><span class="n">cell_name</span><span class="p">)</span> <span class="k">as</span> <span class="n">cell</span><span class="p">:</span>
+            
+
+            <span class="c1"># calculate spacing and gap difference</span>
+            <span class="n">space</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">spacing</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">gap</span>
+            <span class="n">gap</span> <span class="o">=</span>  <span class="bp">self</span><span class="o">.</span><span class="n">gap</span> <span class="o">/</span><span class="mi">2</span> <span class="o">+</span><span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span><span class="o">/</span><span class="mi">2</span>
+
+            <span class="c1"># create the body of the Directional Coupler</span>
+            <span class="n">cell_WG_Top</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">length_DC</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">),(</span><span class="bp">self</span><span class="o">.</span><span class="n">length_DC</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">),(</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">length_DC</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">),(</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">length_DC</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)]</span>
+            <span class="n">nd</span><span class="o">.</span><span class="n">Polygon</span><span class="p">(</span><span class="n">points</span><span class="o">=</span> <span class="n">cell_WG_Top</span><span class="p">,</span> <span class="n">layer</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">layer_Struct</span><span class="p">)</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">gap</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+            <span class="n">cell_WG_Out_Bot</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">length_DC</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">),(</span><span class="bp">self</span><span class="o">.</span><span class="n">length_DC</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">),(</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">length_DC</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">),(</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">length_DC</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)]</span>
+            <span class="n">nd</span><span class="o">.</span><span class="n">Polygon</span><span class="p">(</span><span class="n">points</span><span class="o">=</span> <span class="n">cell_WG_Out_Bot</span><span class="p">,</span> <span class="n">layer</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">layer_Struct</span><span class="p">)</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="n">gap</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+
+            <span class="c1"># create the S-Bends </span>
+            <span class="n">Y_Offset</span> <span class="o">=</span> <span class="n">space</span><span class="o">/</span><span class="mi">2</span> <span class="o">+</span> <span class="n">gap</span>
+            <span class="n">X_Offset</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">length_DC</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">lenght_bend</span>
+            <span class="n">SBend_In_Top</span> <span class="o">=</span> <span class="n">SBends_Bezier</span><span class="p">(</span><span class="n">width_WG</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span><span class="p">,</span> <span class="n">Bend_Length</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lenght_bend</span><span class="p">,</span> <span class="n">Offset</span> <span class="o">=</span> <span class="n">space</span><span class="p">,</span> <span class="n">reverse</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">pins</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="o">-</span><span class="n">X_Offset</span><span class="p">,</span> <span class="n">Y_Offset</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+            <span class="n">SBend_In_Bot</span> <span class="o">=</span> <span class="n">SBends_Bezier</span><span class="p">(</span><span class="n">width_WG</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span><span class="p">,</span> <span class="n">Bend_Length</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lenght_bend</span><span class="p">,</span> <span class="n">Offset</span> <span class="o">=</span> <span class="n">space</span><span class="p">,</span> <span class="n">pins</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="o">-</span><span class="n">X_Offset</span><span class="p">,</span> <span class="o">-</span><span class="n">Y_Offset</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+            <span class="n">SBend_Out_Top</span> <span class="o">=</span> <span class="n">SBends_Bezier</span><span class="p">(</span><span class="n">width_WG</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span><span class="p">,</span> <span class="n">Bend_Length</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lenght_bend</span><span class="p">,</span> <span class="n">Offset</span> <span class="o">=</span> <span class="n">space</span><span class="p">,</span> <span class="n">reverse</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">pins</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">length_DC</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="n">Y_Offset</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+            <span class="n">SBend_Out_Bot</span> <span class="o">=</span> <span class="n">SBends_Bezier</span><span class="p">(</span><span class="n">width_WG</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span><span class="p">,</span> <span class="n">Bend_Length</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lenght_bend</span><span class="p">,</span> <span class="n">Offset</span> <span class="o">=</span> <span class="n">space</span><span class="p">,</span> <span class="n">pins</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">length_DC</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">Y_Offset</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+            
+
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">pins</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+                <span class="n">nd</span><span class="o">.</span><span class="n">Pin</span><span class="p">(</span><span class="s1">&#39;DC_In_Top&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span><span class="p">)</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">X_Offset</span><span class="p">,</span> <span class="n">space</span> <span class="o">+</span> <span class="n">gap</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+                <span class="n">nd</span><span class="o">.</span><span class="n">Pin</span><span class="p">(</span><span class="s1">&#39;DC_Out_Top&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span><span class="p">)</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="o">-</span><span class="n">X_Offset</span><span class="p">,</span> <span class="n">space</span> <span class="o">+</span> <span class="n">gap</span><span class="p">,</span> <span class="mi">180</span><span class="p">)</span>
+                <span class="n">nd</span><span class="o">.</span><span class="n">Pin</span><span class="p">(</span><span class="s1">&#39;DC_In_Bot&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span><span class="p">)</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">X_Offset</span><span class="p">,</span> <span class="o">-</span><span class="p">(</span><span class="n">space</span> <span class="o">+</span> <span class="n">gap</span><span class="p">)</span> <span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+                <span class="n">nd</span><span class="o">.</span><span class="n">Pin</span><span class="p">(</span><span class="s1">&#39;DC_Out_Bot&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span><span class="p">)</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="o">-</span><span class="n">X_Offset</span><span class="p">,</span> <span class="o">-</span><span class="p">(</span><span class="n">space</span> <span class="o">+</span> <span class="n">gap</span><span class="p">),</span> <span class="mi">180</span><span class="p">)</span>
+                <span class="n">nd</span><span class="o">.</span><span class="n">put_stub</span><span class="p">(</span><span class="n">pinlayer</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">layer_Arrow</span><span class="p">,</span> <span class="n">annotation_layer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">layer_text_Pots</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">nd</span><span class="o">.</span><span class="n">put_stub</span><span class="p">()</span>
+
+
+        <span class="k">return</span> <span class="n">cell</span></div>
+
+
+    
+<div class="viewcode-block" id="DirectionalCoupler.put">
+<a class="viewcode-back" href="../rst/Coupler.html#Coupler.DirectionalCoupler.put">[docs]</a>
+    <span class="k">def</span> <span class="nf">put</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        </span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        *args : TYPE</span>
+<span class="sd">            DESCRIPTION.</span>
+<span class="sd">        **kwargs : TYPE</span>
+<span class="sd">            DESCRIPTION.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        Cell to put on the nazca GDSII file</span>
+<span class="sd">            Do not chnage.</span>
+
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cell</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+</div>
+
+    
+
+
+
+<div class="viewcode-block" id="YJunction">
+<a class="viewcode-back" href="../rst/Coupler.html#Coupler.YJunction">[docs]</a>
+<span class="k">class</span> <span class="nc">YJunction</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Y-Junction</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">cell_name</span> <span class="o">=</span> <span class="s2">&quot;YJunction&quot;</span>
+    <span class="n">number</span> <span class="o">=</span> <span class="mi">0</span>  
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">width_WG</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">gap</span><span class="p">,</span> <span class="n">layer_Struct</span><span class="o">=</span><span class="n">Layer</span><span class="o">.</span><span class="n">Struct</span><span class="p">,</span>  <span class="n">layer_text_Pots</span> <span class="o">=</span> <span class="n">Layer</span><span class="o">.</span><span class="n">TXT_Ports</span><span class="p">,</span> <span class="n">layer_Arrow</span> <span class="o">=</span> <span class="n">Layer</span><span class="o">.</span><span class="n">ARROW_CLR</span> <span class="p">,</span><span class="n">spacing</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">Bend_Length</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">reverse</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        </span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        width_WG : int/float</span>
+<span class="sd">            Width of the Waveguide</span>
+<span class="sd">        length : int/float</span>
+<span class="sd">            Length of the Y-Junction</span>
+<span class="sd">        gap : int/float</span>
+<span class="sd">            Gap between the Output Wavguides.</span>
+<span class="sd">        layer_Struct : list, optional</span>
+<span class="sd">            Layers Definition, do not change! The default is Layer.Struct.</span>
+<span class="sd">        layer_text_Pots : list, optional</span>
+<span class="sd">            Layers Definition, do not change! The default is Layer.TXT_Ports.</span>
+<span class="sd">        layer_Arrow : list, optional</span>
+<span class="sd">            Layers Definition, do not change! The default is Layer.ARROW_CLR.</span>
+<span class="sd">        spacing : int/float, optional</span>
+<span class="sd">            Space between the Output Waveguides when S-Bends are used. The default is None.</span>
+<span class="sd">        Bend_Length : int/float, optional</span>
+<span class="sd">            Length of the S-Bends. The default is None.</span>
+<span class="sd">        reverse : int/float, optional</span>
+<span class="sd">            Set revers to an  random numbe, for example reverse = 1 to mirror the</span>
+<span class="sd">            curve on the Y-Axis. The default is None.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        None.</span>
+
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span> <span class="o">=</span> <span class="n">width_WG</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">length</span> <span class="o">=</span> <span class="n">length</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gap</span> <span class="o">=</span> <span class="n">gap</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">layer_Struct</span> <span class="o">=</span> <span class="n">layer_Struct</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">layer_text_Pots</span> <span class="o">=</span> <span class="n">layer_text_Pots</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">layer_Arrow</span> <span class="o">=</span> <span class="n">layer_Arrow</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">spacing</span> <span class="o">=</span> <span class="n">spacing</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">Bend_Length</span> <span class="o">=</span> <span class="n">Bend_Length</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">reverse</span> <span class="o">=</span> <span class="n">reverse</span>
+        <span class="c1"># radius = 50</span>
+        <span class="c1"># self.radius = radius</span>
+
+        <span class="c1"># create the gds</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_cell</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_gds</span><span class="p">()</span>
+
+<div class="viewcode-block" id="YJunction.create_gds">
+<a class="viewcode-back" href="../rst/Coupler.html#Coupler.YJunction.create_gds">[docs]</a>
+    <span class="k">def</span> <span class="nf">create_gds</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        </span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        cell : cell nezca object</span>
+<span class="sd">            Return cell object for the nezca library.</span>
+
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">reverse</span><span class="p">:</span>    
+            <span class="k">with</span> <span class="n">nd</span><span class="o">.</span><span class="n">Cell</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">YJunction</span><span class="o">.</span><span class="n">cell_name</span><span class="p">)</span> <span class="k">as</span> <span class="n">cell</span><span class="p">:</span>
+                
+
+                <span class="c1"># if self.spacing:</span>
+                <span class="c1">#     bend = SBendEuler(self.waveguide_width, waveguide_xs=self.waveguide_xs, offset=(self.spacing - self.gap)/2, radius=self.radius)</span>
+                <span class="c1">#     waveguide_output2 = bend.put(self.length, self.gap/2)</span>
+                <span class="c1">#     waveguide_output1 = bend.put(self.length, -self.gap/2, flip=True)</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">spacing</span><span class="p">:</span>
+                    <span class="n">Offset</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">spacing</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">gap</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>
+                    <span class="n">waveguide</span> <span class="o">=</span> <span class="n">nd</span><span class="o">.</span><span class="n">taper</span><span class="p">(</span><span class="n">length</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">length</span><span class="p">,</span> <span class="n">shift</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">gap</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">width1</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span><span class="p">,</span> <span class="n">width2</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span><span class="p">,</span> <span class="n">layer</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">layer_Struct</span><span class="p">)</span>
+                    <span class="n">waveguide_input</span> <span class="o">=</span> <span class="n">waveguide_output1</span> <span class="o">=</span> <span class="n">waveguide</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">length</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">180</span><span class="p">)</span>
+                    <span class="n">waveguide_output2</span> <span class="o">=</span> <span class="n">waveguide</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">length</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">180</span><span class="p">,</span> <span class="n">flip</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+                    <span class="n">X_Offset</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">a</span> <span class="o">=</span> <span class="n">waveguide_output1</span><span class="o">.</span><span class="n">pin</span><span class="p">[</span><span class="s2">&quot;b0&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">xya</span><span class="p">()</span>
+                    <span class="n">bend1</span> <span class="o">=</span> <span class="n">SBends_Bezier</span><span class="p">(</span><span class="n">width_WG</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span><span class="p">,</span> <span class="n">Bend_Length</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">Bend_Length</span><span class="p">,</span> <span class="n">Offset</span> <span class="o">=</span> <span class="n">Offset</span><span class="p">,</span> <span class="n">reverse</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">pins</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">X_Offset</span><span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">Bend_Length</span><span class="p">,</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">gap</span><span class="o">/</span><span class="mi">2</span> <span class="o">+</span> <span class="n">Offset</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span>
+                    <span class="n">bend2</span> <span class="o">=</span> <span class="n">SBends_Bezier</span><span class="p">(</span><span class="n">width_WG</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span><span class="p">,</span> <span class="n">Bend_Length</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">Bend_Length</span><span class="p">,</span> <span class="n">Offset</span> <span class="o">=</span> <span class="n">Offset</span><span class="p">,</span> <span class="n">pins</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">X_Offset</span><span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">Bend_Length</span><span class="p">,</span> <span class="o">-</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">gap</span><span class="o">/</span><span class="mi">2</span> <span class="o">+</span> <span class="n">Offset</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span>
+                    <span class="c1"># create pin</span>
+                    <span class="n">nd</span><span class="o">.</span><span class="n">Pin</span><span class="p">(</span><span class="s1">&#39;YJunctionR_In&#39;</span><span class="p">,</span> <span class="n">pin</span><span class="o">=</span><span class="n">waveguide_input</span><span class="o">.</span><span class="n">pin</span><span class="p">[</span><span class="s2">&quot;a0&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">length</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+                    <span class="n">nd</span><span class="o">.</span><span class="n">Pin</span><span class="p">(</span><span class="s1">&#39;YJunctionR_Out1&#39;</span><span class="p">,</span> <span class="n">pin</span><span class="o">=</span><span class="n">waveguide_output1</span><span class="o">.</span><span class="n">pin</span><span class="p">[</span><span class="s2">&quot;b0&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">length</span><span class="o">/</span><span class="mi">2</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">Bend_Length</span><span class="p">,</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">spacing</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span> <span class="mi">180</span><span class="p">)</span>
+                    <span class="n">nd</span><span class="o">.</span><span class="n">Pin</span><span class="p">(</span><span class="s1">&#39;YJunctionR_Out2&#39;</span><span class="p">,</span> <span class="n">pin</span><span class="o">=</span><span class="n">waveguide_output2</span><span class="o">.</span><span class="n">pin</span><span class="p">[</span><span class="s2">&quot;b0&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">length</span><span class="o">/</span><span class="mi">2</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">Bend_Length</span><span class="p">,</span> <span class="o">-</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">spacing</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span> <span class="mi">180</span><span class="p">)</span>
+                    <span class="n">nd</span><span class="o">.</span><span class="n">put_stub</span><span class="p">(</span><span class="n">pinlayer</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">layer_Arrow</span><span class="p">,</span> <span class="n">annotation_layer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">layer_text_Pots</span><span class="p">)</span>
+                
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">waveguide</span> <span class="o">=</span> <span class="n">nd</span><span class="o">.</span><span class="n">taper</span><span class="p">(</span><span class="n">length</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">length</span><span class="p">,</span> <span class="n">shift</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">gap</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">width1</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span><span class="p">,</span> <span class="n">width2</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span><span class="p">,</span> <span class="n">layer</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">layer_Struct</span><span class="p">)</span>
+                    <span class="n">waveguide_input</span> <span class="o">=</span> <span class="n">waveguide_output1</span> <span class="o">=</span> <span class="n">waveguide</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">length</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">180</span><span class="p">)</span>
+                    <span class="n">waveguide_output2</span> <span class="o">=</span> <span class="n">waveguide</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">length</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">180</span><span class="p">,</span> <span class="n">flip</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+                    <span class="c1"># create pin</span>
+                    <span class="n">nd</span><span class="o">.</span><span class="n">Pin</span><span class="p">(</span><span class="s1">&#39;YJunctionR_In&#39;</span><span class="p">,</span> <span class="n">pin</span><span class="o">=</span><span class="n">waveguide_input</span><span class="o">.</span><span class="n">pin</span><span class="p">[</span><span class="s2">&quot;a0&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">put</span><span class="p">()</span>
+                    <span class="n">nd</span><span class="o">.</span><span class="n">Pin</span><span class="p">(</span><span class="s1">&#39;YJunctionR_Out1&#39;</span><span class="p">,</span> <span class="n">pin</span><span class="o">=</span><span class="n">waveguide_output1</span><span class="o">.</span><span class="n">pin</span><span class="p">[</span><span class="s2">&quot;b0&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">put</span><span class="p">()</span>
+                    <span class="n">nd</span><span class="o">.</span><span class="n">Pin</span><span class="p">(</span><span class="s1">&#39;YJunctionR_Out2&#39;</span><span class="p">,</span> <span class="n">pin</span><span class="o">=</span><span class="n">waveguide_output2</span><span class="o">.</span><span class="n">pin</span><span class="p">[</span><span class="s2">&quot;b0&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">put</span><span class="p">()</span>
+                    <span class="n">nd</span><span class="o">.</span><span class="n">put_stub</span><span class="p">(</span><span class="n">pinlayer</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">layer_Arrow</span><span class="p">,</span> <span class="n">annotation_layer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">layer_text_Pots</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">cell</span>
+        
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">with</span> <span class="n">nd</span><span class="o">.</span><span class="n">Cell</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">YJunction</span><span class="o">.</span><span class="n">cell_name</span><span class="p">)</span> <span class="k">as</span> <span class="n">cell</span><span class="p">:</span>
+                
+
+                <span class="c1"># if self.spacing:</span>
+                <span class="c1">#     bend = SBendEuler(self.waveguide_width, waveguide_xs=self.waveguide_xs, offset=(self.spacing - self.gap)/2, radius=self.radius)</span>
+                <span class="c1">#     waveguide_output2 = bend.put(self.length, self.gap/2)</span>
+                <span class="c1">#     waveguide_output1 = bend.put(self.length, -self.gap/2, flip=True)</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">spacing</span><span class="p">:</span>
+                    <span class="n">Offset</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">spacing</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">gap</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>
+                    <span class="n">waveguide</span> <span class="o">=</span> <span class="n">nd</span><span class="o">.</span><span class="n">taper</span><span class="p">(</span><span class="n">length</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">length</span><span class="p">,</span> <span class="n">shift</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">gap</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">width1</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span><span class="p">,</span> <span class="n">width2</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span><span class="p">,</span> <span class="n">layer</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">layer_Struct</span><span class="p">)</span>
+                    <span class="n">waveguide_input</span> <span class="o">=</span> <span class="n">waveguide_output1</span> <span class="o">=</span> <span class="n">waveguide</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">length</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+                    <span class="n">waveguide_output2</span> <span class="o">=</span> <span class="n">waveguide</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">length</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">flip</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+                    <span class="n">X_Offset</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">a</span> <span class="o">=</span> <span class="n">waveguide_output1</span><span class="o">.</span><span class="n">pin</span><span class="p">[</span><span class="s2">&quot;b0&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">xya</span><span class="p">()</span>
+                    <span class="n">bend1</span> <span class="o">=</span> <span class="n">SBends_Bezier</span><span class="p">(</span><span class="n">width_WG</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span><span class="p">,</span> <span class="n">Bend_Length</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">Bend_Length</span><span class="p">,</span> <span class="n">Offset</span> <span class="o">=</span> <span class="n">Offset</span><span class="p">,</span> <span class="n">pins</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">X_Offset</span><span class="p">,</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">gap</span><span class="o">/</span><span class="mi">2</span> <span class="o">+</span> <span class="n">Offset</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span>
+                    <span class="n">bend2</span> <span class="o">=</span> <span class="n">SBends_Bezier</span><span class="p">(</span><span class="n">width_WG</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span><span class="p">,</span> <span class="n">Bend_Length</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">Bend_Length</span><span class="p">,</span> <span class="n">Offset</span> <span class="o">=</span> <span class="n">Offset</span><span class="p">,</span> <span class="n">reverse</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">pins</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">X_Offset</span><span class="p">,</span> <span class="o">-</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">gap</span><span class="o">/</span><span class="mi">2</span> <span class="o">+</span> <span class="n">Offset</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span>
+                    <span class="c1"># create pin</span>
+                    <span class="n">nd</span><span class="o">.</span><span class="n">Pin</span><span class="p">(</span><span class="s1">&#39;YJunction_In&#39;</span><span class="p">,</span> <span class="n">pin</span><span class="o">=</span><span class="n">waveguide_input</span><span class="o">.</span><span class="n">pin</span><span class="p">[</span><span class="s2">&quot;a0&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">put</span><span class="p">()</span>
+                    <span class="n">nd</span><span class="o">.</span><span class="n">Pin</span><span class="p">(</span><span class="s1">&#39;YJunction_Out1&#39;</span><span class="p">,</span> <span class="n">pin</span><span class="o">=</span><span class="n">waveguide_output1</span><span class="o">.</span><span class="n">pin</span><span class="p">[</span><span class="s2">&quot;b0&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">length</span><span class="o">/</span><span class="mi">2</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">Bend_Length</span><span class="p">,</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">spacing</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span>
+                    <span class="n">nd</span><span class="o">.</span><span class="n">Pin</span><span class="p">(</span><span class="s1">&#39;YJunction_Out2&#39;</span><span class="p">,</span> <span class="n">pin</span><span class="o">=</span><span class="n">waveguide_output2</span><span class="o">.</span><span class="n">pin</span><span class="p">[</span><span class="s2">&quot;b0&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">length</span><span class="o">/</span><span class="mi">2</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">Bend_Length</span><span class="p">,</span> <span class="o">-</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">spacing</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span>
+                    <span class="n">nd</span><span class="o">.</span><span class="n">put_stub</span><span class="p">(</span><span class="n">pinlayer</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">layer_Arrow</span><span class="p">,</span> <span class="n">annotation_layer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">layer_text_Pots</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">waveguide</span> <span class="o">=</span> <span class="n">nd</span><span class="o">.</span><span class="n">taper</span><span class="p">(</span><span class="n">length</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">length</span><span class="p">,</span> <span class="n">shift</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">gap</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">width1</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span><span class="p">,</span> <span class="n">width2</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">width_WG</span><span class="p">,</span> <span class="n">layer</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">layer_Struct</span><span class="p">)</span>
+                    <span class="n">waveguide_input</span> <span class="o">=</span> <span class="n">waveguide_output1</span> <span class="o">=</span> <span class="n">waveguide</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">length</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+                    <span class="n">waveguide_output2</span> <span class="o">=</span> <span class="n">waveguide</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">length</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">flip</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+                    <span class="c1"># create pin</span>
+                    <span class="n">nd</span><span class="o">.</span><span class="n">Pin</span><span class="p">(</span><span class="s1">&#39;YJunction_In&#39;</span><span class="p">,</span> <span class="n">pin</span><span class="o">=</span><span class="n">waveguide_input</span><span class="o">.</span><span class="n">pin</span><span class="p">[</span><span class="s2">&quot;a0&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">put</span><span class="p">()</span>
+                    <span class="n">nd</span><span class="o">.</span><span class="n">Pin</span><span class="p">(</span><span class="s1">&#39;YJunction_Out1&#39;</span><span class="p">,</span> <span class="n">pin</span><span class="o">=</span><span class="n">waveguide_output1</span><span class="o">.</span><span class="n">pin</span><span class="p">[</span><span class="s2">&quot;b0&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">put</span><span class="p">()</span>
+                    <span class="n">nd</span><span class="o">.</span><span class="n">Pin</span><span class="p">(</span><span class="s1">&#39;YJunction_Out2&#39;</span><span class="p">,</span> <span class="n">pin</span><span class="o">=</span><span class="n">waveguide_output2</span><span class="o">.</span><span class="n">pin</span><span class="p">[</span><span class="s2">&quot;b0&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">put</span><span class="p">()</span>
+                    <span class="n">nd</span><span class="o">.</span><span class="n">put_stub</span><span class="p">(</span><span class="n">pinlayer</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">layer_Arrow</span><span class="p">,</span> <span class="n">annotation_layer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">layer_text_Pots</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">cell</span></div>
+
+
+
+<div class="viewcode-block" id="YJunction.put">
+<a class="viewcode-back" href="../rst/Coupler.html#Coupler.YJunction.put">[docs]</a>
+    <span class="k">def</span> <span class="nf">put</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        *args : TYPE</span>
+<span class="sd">            DESCRIPTION.</span>
+<span class="sd">        **kwargs : TYPE</span>
+<span class="sd">            DESCRIPTION.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        Cell to put on the nazca GDSII file</span>
+<span class="sd">            Do not chnage.</span>
+
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cell</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+</div>
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Martin Mihaylov.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

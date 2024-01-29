@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Layer Deffinitions module &mdash; Python GDS with Nazca 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=f2a433a1"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Python GDS with Nazca
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Layer Deffinitions module</a><ul>
+<li><a class="reference internal" href="#LayerDeff.Layer"><code class="docutils literal notranslate"><span class="pre">Layer</span></code></a><ul>
+<li><a class="reference internal" href="#LayerDeff.Layer.ARROW_CLR"><code class="docutils literal notranslate"><span class="pre">Layer.ARROW_CLR</span></code></a></li>
+<li><a class="reference internal" href="#LayerDeff.Layer.CLD_OPEN"><code class="docutils literal notranslate"><span class="pre">Layer.CLD_OPEN</span></code></a></li>
+<li><a class="reference internal" href="#LayerDeff.Layer.DEEP_GRID"><code class="docutils literal notranslate"><span class="pre">Layer.DEEP_GRID</span></code></a></li>
+<li><a class="reference internal" href="#LayerDeff.Layer.MET1"><code class="docutils literal notranslate"><span class="pre">Layer.MET1</span></code></a></li>
+<li><a class="reference internal" href="#LayerDeff.Layer.MET2"><code class="docutils literal notranslate"><span class="pre">Layer.MET2</span></code></a></li>
+<li><a class="reference internal" href="#LayerDeff.Layer.PAYLOAD"><code class="docutils literal notranslate"><span class="pre">Layer.PAYLOAD</span></code></a></li>
+<li><a class="reference internal" href="#LayerDeff.Layer.Struct"><code class="docutils literal notranslate"><span class="pre">Layer.Struct</span></code></a></li>
+<li><a class="reference internal" href="#LayerDeff.Layer.TXT_DEEP_GRID"><code class="docutils literal notranslate"><span class="pre">Layer.TXT_DEEP_GRID</span></code></a></li>
+<li><a class="reference internal" href="#LayerDeff.Layer.TXT_MET1"><code class="docutils literal notranslate"><span class="pre">Layer.TXT_MET1</span></code></a></li>
+<li><a class="reference internal" href="#LayerDeff.Layer.TXT_MET2"><code class="docutils literal notranslate"><span class="pre">Layer.TXT_MET2</span></code></a></li>
+<li><a class="reference internal" href="#LayerDeff.Layer.TXT_Ports"><code class="docutils literal notranslate"><span class="pre">Layer.TXT_Ports</span></code></a></li>
+<li><a class="reference internal" href="#LayerDeff.Layer.TXT_Struct"><code class="docutils literal notranslate"><span class="pre">Layer.TXT_Struct</span></code></a></li>
+<li><a class="reference internal" href="#LayerDeff.Layer.TXT_VIA"><code class="docutils literal notranslate"><span class="pre">Layer.TXT_VIA</span></code></a></li>
+<li><a class="reference internal" href="#LayerDeff.Layer.VIA"><code class="docutils literal notranslate"><span class="pre">Layer.VIA</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#LayerDeff.XS"><code class="docutils literal notranslate"><span class="pre">XS</span></code></a><ul>
+<li><a class="reference internal" href="#LayerDeff.XS.ARROW_CLR"><code class="docutils literal notranslate"><span class="pre">XS.ARROW_CLR</span></code></a></li>
+<li><a class="reference internal" href="#LayerDeff.XS.CLD_OPEN"><code class="docutils literal notranslate"><span class="pre">XS.CLD_OPEN</span></code></a></li>
+<li><a class="reference internal" href="#LayerDeff.XS.DEEP_GRID"><code class="docutils literal notranslate"><span class="pre">XS.DEEP_GRID</span></code></a></li>
+<li><a class="reference internal" href="#LayerDeff.XS.MET1"><code class="docutils literal notranslate"><span class="pre">XS.MET1</span></code></a></li>
+<li><a class="reference internal" href="#LayerDeff.XS.MET2"><code class="docutils literal notranslate"><span class="pre">XS.MET2</span></code></a></li>
+<li><a class="reference internal" href="#LayerDeff.XS.Struct"><code class="docutils literal notranslate"><span class="pre">XS.Struct</span></code></a></li>
+<li><a class="reference internal" href="#LayerDeff.XS.TXT_DEEP_GRID"><code class="docutils literal notranslate"><span class="pre">XS.TXT_DEEP_GRID</span></code></a></li>
+<li><a class="reference internal" href="#LayerDeff.XS.TXT_MET1"><code class="docutils literal notranslate"><span class="pre">XS.TXT_MET1</span></code></a></li>
+<li><a class="reference internal" href="#LayerDeff.XS.TXT_MET2"><code class="docutils literal notranslate"><span class="pre">XS.TXT_MET2</span></code></a></li>
+<li><a class="reference internal" href="#LayerDeff.XS.TXT_Ports"><code class="docutils literal notranslate"><span class="pre">XS.TXT_Ports</span></code></a></li>
+<li><a class="reference internal" href="#LayerDeff.XS.TXT_Struct"><code class="docutils literal notranslate"><span class="pre">XS.TXT_Struct</span></code></a></li>
+<li><a class="reference internal" href="#LayerDeff.XS.TXT_VIA"><code class="docutils literal notranslate"><span class="pre">XS.TXT_VIA</span></code></a></li>
+<li><a class="reference internal" href="#LayerDeff.XS.VIA"><code class="docutils literal notranslate"><span class="pre">XS.VIA</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Python GDS with Nazca</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Layer Deffinitions module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/rst/LayerDeff.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="layer-deffinitions-module">
+<h1>Layer Deffinitions module<a class="headerlink" href="#layer-deffinitions-module" title="Link to this heading"></a></h1>
+<dl class="py class" id="module-LayerDeff">
+<dt class="sig sig-object py" id="LayerDeff.Layer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">LayerDeff.</span></span><span class="sig-name descname"><span class="pre">Layer</span></span><a class="reference internal" href="../_modules/LayerDeff.html#Layer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#LayerDeff.Layer" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Define the Layers for the Payload, Structure, Metal Layers, Vias and Texts.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="LayerDeff.Layer.ARROW_CLR">
+<span class="sig-name descname"><span class="pre">ARROW_CLR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'ARROW_CLR'</span></em><a class="headerlink" href="#LayerDeff.Layer.ARROW_CLR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="LayerDeff.Layer.CLD_OPEN">
+<span class="sig-name descname"><span class="pre">CLD_OPEN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'CLD_OPEN'</span></em><a class="headerlink" href="#LayerDeff.Layer.CLD_OPEN" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="LayerDeff.Layer.DEEP_GRID">
+<span class="sig-name descname"><span class="pre">DEEP_GRID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'DEEP_GRID'</span></em><a class="headerlink" href="#LayerDeff.Layer.DEEP_GRID" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="LayerDeff.Layer.MET1">
+<span class="sig-name descname"><span class="pre">MET1</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MET1'</span></em><a class="headerlink" href="#LayerDeff.Layer.MET1" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="LayerDeff.Layer.MET2">
+<span class="sig-name descname"><span class="pre">MET2</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MET2'</span></em><a class="headerlink" href="#LayerDeff.Layer.MET2" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="LayerDeff.Layer.PAYLOAD">
+<span class="sig-name descname"><span class="pre">PAYLOAD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'PAYLOAD'</span></em><a class="headerlink" href="#LayerDeff.Layer.PAYLOAD" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="LayerDeff.Layer.Struct">
+<span class="sig-name descname"><span class="pre">Struct</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Struct'</span></em><a class="headerlink" href="#LayerDeff.Layer.Struct" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="LayerDeff.Layer.TXT_DEEP_GRID">
+<span class="sig-name descname"><span class="pre">TXT_DEEP_GRID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'TXT_DEEP_GRID'</span></em><a class="headerlink" href="#LayerDeff.Layer.TXT_DEEP_GRID" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="LayerDeff.Layer.TXT_MET1">
+<span class="sig-name descname"><span class="pre">TXT_MET1</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'TXT_MET1'</span></em><a class="headerlink" href="#LayerDeff.Layer.TXT_MET1" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="LayerDeff.Layer.TXT_MET2">
+<span class="sig-name descname"><span class="pre">TXT_MET2</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'TXT_MET2'</span></em><a class="headerlink" href="#LayerDeff.Layer.TXT_MET2" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="LayerDeff.Layer.TXT_Ports">
+<span class="sig-name descname"><span class="pre">TXT_Ports</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'TXT_Ports'</span></em><a class="headerlink" href="#LayerDeff.Layer.TXT_Ports" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="LayerDeff.Layer.TXT_Struct">
+<span class="sig-name descname"><span class="pre">TXT_Struct</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'TXT_Struct'</span></em><a class="headerlink" href="#LayerDeff.Layer.TXT_Struct" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="LayerDeff.Layer.TXT_VIA">
+<span class="sig-name descname"><span class="pre">TXT_VIA</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'TXT_VIA'</span></em><a class="headerlink" href="#LayerDeff.Layer.TXT_VIA" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="LayerDeff.Layer.VIA">
+<span class="sig-name descname"><span class="pre">VIA</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'VIA'</span></em><a class="headerlink" href="#LayerDeff.Layer.VIA" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="LayerDeff.XS">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">LayerDeff.</span></span><span class="sig-name descname"><span class="pre">XS</span></span><a class="reference internal" href="../_modules/LayerDeff.html#XS"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#LayerDeff.XS" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="LayerDeff.XS.ARROW_CLR">
+<span class="sig-name descname"><span class="pre">ARROW_CLR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'ARROW_CLR'</span></em><a class="headerlink" href="#LayerDeff.XS.ARROW_CLR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="LayerDeff.XS.CLD_OPEN">
+<span class="sig-name descname"><span class="pre">CLD_OPEN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'CLD_OPEN'</span></em><a class="headerlink" href="#LayerDeff.XS.CLD_OPEN" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="LayerDeff.XS.DEEP_GRID">
+<span class="sig-name descname"><span class="pre">DEEP_GRID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'DEEP_GRID'</span></em><a class="headerlink" href="#LayerDeff.XS.DEEP_GRID" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="LayerDeff.XS.MET1">
+<span class="sig-name descname"><span class="pre">MET1</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MET1'</span></em><a class="headerlink" href="#LayerDeff.XS.MET1" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="LayerDeff.XS.MET2">
+<span class="sig-name descname"><span class="pre">MET2</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MET2'</span></em><a class="headerlink" href="#LayerDeff.XS.MET2" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="LayerDeff.XS.Struct">
+<span class="sig-name descname"><span class="pre">Struct</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Struct'</span></em><a class="headerlink" href="#LayerDeff.XS.Struct" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="LayerDeff.XS.TXT_DEEP_GRID">
+<span class="sig-name descname"><span class="pre">TXT_DEEP_GRID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'TXT_DEEP_GRID'</span></em><a class="headerlink" href="#LayerDeff.XS.TXT_DEEP_GRID" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="LayerDeff.XS.TXT_MET1">
+<span class="sig-name descname"><span class="pre">TXT_MET1</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'TXT_MET1'</span></em><a class="headerlink" href="#LayerDeff.XS.TXT_MET1" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="LayerDeff.XS.TXT_MET2">
+<span class="sig-name descname"><span class="pre">TXT_MET2</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'TXT_MET2'</span></em><a class="headerlink" href="#LayerDeff.XS.TXT_MET2" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="LayerDeff.XS.TXT_Ports">
+<span class="sig-name descname"><span class="pre">TXT_Ports</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'TXT_Ports'</span></em><a class="headerlink" href="#LayerDeff.XS.TXT_Ports" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="LayerDeff.XS.TXT_Struct">
+<span class="sig-name descname"><span class="pre">TXT_Struct</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'TXT_Struct'</span></em><a class="headerlink" href="#LayerDeff.XS.TXT_Struct" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="LayerDeff.XS.TXT_VIA">
+<span class="sig-name descname"><span class="pre">TXT_VIA</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'TXT_VIA'</span></em><a class="headerlink" href="#LayerDeff.XS.TXT_VIA" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="LayerDeff.XS.VIA">
+<span class="sig-name descname"><span class="pre">VIA</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'VIA'</span></em><a class="headerlink" href="#LayerDeff.XS.VIA" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Martin Mihaylov.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
